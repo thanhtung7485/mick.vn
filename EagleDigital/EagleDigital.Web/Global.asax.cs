@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac;
+using Autofac.Integration.Mvc;
+using EagleDigital.DbFirst;
+using EagleDigital.DbFirst.Model;
+using EagleDigital.DbFirst.Repositories;
+using EagleDigital.Service.Services;
 
 namespace EagleDigital.Web
 {
@@ -16,6 +23,8 @@ namespace EagleDigital.Web
     {
         protected void Application_Start()
         {
+
+            RegisterDbFirstComponents();
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
@@ -23,5 +32,20 @@ namespace EagleDigital.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        private void RegisterDbFirstComponents()
+        {
+
+            var builder = new ContainerBuilder();
+            builder.RegisterControllers(Assembly.GetExecutingAssembly());
+
+            builder.RegisterType<EntityRepository<Category>>().As<IEntityRepository<Category>>();
+            builder.RegisterType<CategoryService>().As<ICategoryService>();
+
+            builder.Register(c => new MickDbContext()).As<IEntitiesContext>();
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+        }
+
     }
 }

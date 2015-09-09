@@ -1,0 +1,18 @@
+﻿@model List<EagleDigital.DbFirst.Model.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach(var item in Model)
+{
+    <text>
+        
+        @item.Name <br/>
+        
+    </text>
+}
+
+
