@@ -42,7 +42,10 @@ namespace EagleDigital.Web
             builder.RegisterType<EntityRepository<Category>>().As<IEntityRepository<Category>>();
             builder.RegisterType<CategoryService>().As<ICategoryService>();
 
-            builder.Register(c => new MickDbContext()).As<IEntitiesContext>();
+            builder.RegisterType<EntityRepository<Domain>>().As<IEntityRepository<Domain>>();
+            builder.RegisterType<DomainService>().As<IDomainService>();
+
+            builder.Register(c => new MickDatabaseEntities()).As<IEntitiesContext>();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }

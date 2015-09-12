@@ -5,7 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="535f9c18e98f4fd9811e5338ad3ed808" Name="Diagram1">
-        <EntityTypeShape EntityType="MickDatabaseModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MickDatabaseModel.Category" Width="1.5" PointX="0.74409600568194678" PointY="7.2647903595421415" />
+        <EntityTypeShape EntityType="MickDatabaseModel.Domain" Width="1.5" PointX="2.3175611022475926" PointY="10.393138562512183" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

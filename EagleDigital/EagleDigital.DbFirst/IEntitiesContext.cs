@@ -12,6 +12,8 @@ namespace EagleDigital.DbFirst
     public interface IEntitiesContext : IDisposable
     {
          DbSet<Category> Categories { get; set; }
+         DbSet<Domain> Domains { get; set; }
+
 
          int SaveChanges();
          DbSet<T> Set<T>() where T : class;

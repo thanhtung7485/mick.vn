@@ -79,8 +79,11 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="IEntitiesContext.cs" />
-    <Compile Include="MickDbContext.cs" />
+    <Compile Include="MickDatabaseEntities.cs" />
     <Compile Include="Model\Category.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Domain.cs">
       <DependentUpon>MickDb.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MickDb.Context.cs">

@@ -2,6 +2,7 @@
 <Schema Namespace="MickDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="MickDatabaseModelStoreContainer">
     <EntitySet Name="Category" EntityType="MickDatabaseModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Domain" EntityType="MickDatabaseModel.Store.Domain" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="Category">
     <Key>
@@ -9,6 +10,14 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Domain">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Description" Type="nvarchar" MaxLength="1000" />
   </EntityType>
 </Schema>

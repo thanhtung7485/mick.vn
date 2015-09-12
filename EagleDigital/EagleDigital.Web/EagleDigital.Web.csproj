@@ -136,6 +136,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DomainDetailsModel.cs" />
+    <Compile Include="Models\HomeModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +153,11 @@
     <Content Include="Content\Image\hpe_US_EN_HHO_PSG_win10-upgrade-hho-v2_20150707.jpg" />
     <Content Include="Content\Image\hpe_US_EN_LEB_Corp_Mod-2u_nsob-cloud_20150503.jpg" />
     <Content Include="Content\Image\hpe_US_EN_SMB_PSG_Mod-3u_win10-upgrade-smb-v1_20150622.jpg" />
+    <Content Include="Content\Image\eagle.png" />
+    <Content Include="Content\Image\performance-hero_v3_tcm_245_1607399.jpg" />
     <Content Include="Content\Image\s.gif" />
+    <Content Include="Content\ot-layout.css" />
+    <Content Include="Content\retail-solutions_layout.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -210,6 +216,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ajax" />
     <Content Include="Scripts\angular.min.js.map" />
+    <None Include="Properties\PublishProfiles\Mick.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\84e4fe5be6c28991615fbd51f7d4007a.js" />
     <Content Include="Scripts\abc.js" />
@@ -224,6 +231,7 @@
     <Content Include="Scripts\bk-coretag.js" />
     <Content Include="Scripts\blend-home-hpe.min.js" />
     <Content Include="Scripts\Bootstrap.js" />
+    <Content Include="Scripts\BrightcoveExperiences.js" />
     <Content Include="Scripts\caas-privacy-cookie-3.1.js" />
     <Content Include="Scripts\can.jquery.js" />
     <Content Include="Scripts\hf-init-v3.1-jq.js" />
@@ -1005,10 +1013,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\DomainDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

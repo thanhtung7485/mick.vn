@@ -13,9 +13,9 @@ namespace EagleDigital.DbFirst.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MickDbContext : DbContext
+    public partial class MickDatabaseEntities : DbContext
     {
-        public MickDbContext()
+        public MickDatabaseEntities()
             : base("name=MickDatabaseEntities")
         {
         }
@@ -26,5 +26,6 @@ namespace EagleDigital.DbFirst.Model
         }
     
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Domain> Domains { get; set; }
     }
 }

@@ -18,8 +18,8 @@ namespace EagleDigital.Service.Services
 
         public IQueryable<Category> List()
         {
-            var bulletinList = _categoryRepository.GetAll().OrderBy(p=>p.Name);
-            return bulletinList;
+            var categoryList = _categoryRepository.GetAll().OrderBy(p=>p.Name);
+            return categoryList;
         }
 
         public Category Details(int id)

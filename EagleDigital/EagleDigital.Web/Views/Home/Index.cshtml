@@ -1,4 +1,4 @@
-﻿
+﻿@model EagleDigital.Web.Models.HomeModelView
 
 
 @{
@@ -6,12 +6,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*@foreach(var item in Model)
-{
-    <text>
-        @item.Name
-    </text>
-}*@
 
 
 <div class="container">
@@ -36,13 +30,21 @@
                         <div class="shopNow" data-href="shopNowURL">
                             <strong>Development</strong>
                             <ul>
+                                @foreach(var item in Model.ListDomain){
+                                        <text>
+                                            <li><a href='@Url.Action("DomainDetail","Home")' tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos1-Laptops">@item.Name</a></li>
+                                        </text>
+                                }
+
+                                @* 
                                 <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos1-Laptops">Banking</a></li>
                                 <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos2-Tablets">Education</a></li>
                                 <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos3-Desktops">Management</a></li>
                                 <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_IPG_shopnow_pos4-Printers">Business</a></li>
                                 <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_IPG_shopnow_pos5-Ink-toner-paper">Advertising</a></li>
                                 <li><a href="" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos6-Monitors">Transfer</a></li>
-                                <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos7-Accessories">Computing</a></li>
+                                <li><a href="" tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos7-Accessories">Computing</a></li>*@
+
                             </ul>
                             <a href="" class="button secondary" data-metrics="us_en_home_message_l1_hho_Shared_shopnow-cta">Implementation</a>
                         </div>
