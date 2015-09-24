@@ -147,13 +147,13 @@
     <Content Include="Content\blend-home.min.css" />
     <Content Include="Content\hf-v3.1.css" />
     <Content Include="Content\hps-fontface-core.css" />
+    <Content Include="Content\Image\eagle.png" />
     <Content Include="Content\Image\hp-logo-pr.gif" />
     <Content Include="Content\Image\hp-logo.gif" />
     <Content Include="Content\Image\hpe_US_EN_HHO_PSG_Mod-1u_new-desktops_20150628.jpg" />
     <Content Include="Content\Image\hpe_US_EN_HHO_PSG_win10-upgrade-hho-v2_20150707.jpg" />
     <Content Include="Content\Image\hpe_US_EN_LEB_Corp_Mod-2u_nsob-cloud_20150503.jpg" />
     <Content Include="Content\Image\hpe_US_EN_SMB_PSG_Mod-3u_win10-upgrade-smb-v1_20150622.jpg" />
-    <Content Include="Content\Image\eagle.png" />
     <Content Include="Content\Image\performance-hero_v3_tcm_245_1607399.jpg" />
     <Content Include="Content\Image\s.gif" />
     <Content Include="Content\ot-layout.css" />
