@@ -80,10 +80,19 @@
     <Compile Include="Constants.cs" />
     <Compile Include="IEntitiesContext.cs" />
     <Compile Include="MickDatabaseEntities.cs" />
+    <Compile Include="Model\AboutU.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Category.cs">
       <DependentUpon>MickDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ContactU.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Domain.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DomainInfor.cs">
       <DependentUpon>MickDb.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MickDb.Context.cs">
@@ -100,6 +109,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MickDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RequestProject.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SubCategory.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TabName.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EntityRepository.cs" />

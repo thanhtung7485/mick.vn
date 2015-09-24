@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using EagleDigital.DbFirst.Model
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -52,8 +53,21 @@
                     <a class="screenReading js-skip-link" href="#skiptobody" shape="rect" tabindex="1">Skip to Content</a>
                     <a class="screenReading js-skip-link" href="#skiptofooter" shape="rect" tabindex="1">Skip to Footer</a>
                 </span>
-
+                
                 <div class="hf_top_menu js_header_topmenu">
+                    <ul class="js_hf_menu hf_menu level1" role="menu">
+                        @foreach (var item in (List<Category>)HttpContext.Current.Session["ListCategory"])
+                        {
+                            <text>
+                                <li xmlns="" class="selectable first_li">
+                                    <a xmlns="http://www.w3.org/1999/xhtml" class="header_link" href="javascript:void(0);" shape="rect" tabindex="2" role="menuitem"><span>@item.Name</span><span class="screenReading js_screen_reading">&nbsp;</span></a>
+                                </li>
+                            </text>
+                        }
+                    </ul>
+                </div>
+
+                @*<div class="hf_top_menu js_header_topmenu">
                     <ul class="js_hf_menu hf_menu level1" role="menu">
                         <li xmlns="" class="selectable first_li"><a xmlns="http://www.w3.org/1999/xhtml" class="header_link" href="javascript:void(0);" shape="rect" tabindex="2" role="menuitem"><span>For Home</span><span class="screenReading js_screen_reading">&nbsp;</span></a><ul xmlns="http://www.w3.org/1999/xhtml" class="js_hf_menu hf_menu level2" role="menu" style="display: none;">
                             <li xmlns="" class="top_corner">&nbsp;</li>
@@ -323,7 +337,7 @@
                         </ul>
                         </li>
                     </ul>
-                </div>
+                </div>*@
 
                 <div class="hdr_widgets wm_no_widgets" id="widget_menu">
                     <div class="search_block sb_no_widgets js_search search_hp">

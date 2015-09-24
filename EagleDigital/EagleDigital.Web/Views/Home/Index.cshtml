@@ -32,7 +32,7 @@
                             <ul>
                                 @foreach(var item in Model.ListDomain){
                                         <text>
-                                            <li><a href='@Url.Action("DomainDetail","Home")' tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos1-Laptops">@item.Name</a></li>
+                                            <li><a href='@Url.Action("DomainDetail","Home",new {Id=item.Id})' tabindex="100" data-metrics="us_en_home_message_l1_hho_PSG_shopnow_pos1-Laptops">@item.Name</a></li>
                                         </text>
                                 }
 

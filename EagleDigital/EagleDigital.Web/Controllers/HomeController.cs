@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EagleDigital.Service.IServices;
 using EagleDigital.Service.Services;
 using EagleDigital.Web.Models;
 
@@ -15,9 +16,11 @@ namespace EagleDigital.Web.Controllers
 
         private readonly ICategoryService _categoryService;
         private readonly IDomainService _domainService;
+        private readonly IDomainInforService _domainInforService;
 
-        public HomeController(ICategoryService categoryService, IDomainService domainService)
+        public HomeController(ICategoryService categoryService, IDomainService domainService, IDomainInforService domainInforService)
         {
+            _domainInforService = domainInforService;
             _categoryService = categoryService;
             _domainService = domainService;
         }
@@ -27,12 +30,17 @@ namespace EagleDigital.Web.Controllers
             var listCategory = _categoryService.List().ToList();
             var listDomain = _domainService.List().ToList();
             var model = new HomeModelView {ListDomain = listDomain, ListCategory = listCategory};
+            ViewBag.ListCategory = listCategory;
+            if (HttpContext.Session != null) HttpContext.Session.Add("ListCategory", listCategory);
             return View(model);
         }
 
-        public ActionResult DomainDetail()
+        public ActionResult DomainDetail(int id)
         {
-            return View();
+            var listDomainInfor = _domainInforService.List().Where(p => p.DomainId == id).ToList();
+            var model = new DomainInforModel();
+            model.ListDomainInfors = listDomainInfor;
+            return View(model);
         }
 
 

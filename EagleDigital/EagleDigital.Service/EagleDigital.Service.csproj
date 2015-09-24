@@ -69,11 +69,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IServices\IDomainInforService.cs" />
     <Compile Include="IServices\IDomainService.cs" />
+    <Compile Include="IServices\ITabNameService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IServices\ICategoryService.cs" />
     <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\DomainInforService.cs" />
     <Compile Include="Services\DomainService.cs" />
+    <Compile Include="Services\TabNameService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EagleDigital.DbFirst\EagleDigital.DbFirst.csproj">

@@ -25,7 +25,13 @@ namespace EagleDigital.DbFirst.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<AboutU> AboutUs { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ContactU> ContactUs { get; set; }
         public DbSet<Domain> Domains { get; set; }
+        public DbSet<DomainInfor> DomainInfors { get; set; }
+        public DbSet<RequestProject> RequestProjects { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<TabName> TabNames { get; set; }
     }
 }

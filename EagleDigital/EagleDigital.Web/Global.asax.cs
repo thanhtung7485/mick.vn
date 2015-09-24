@@ -12,6 +12,7 @@ using Autofac.Integration.Mvc;
 using EagleDigital.DbFirst;
 using EagleDigital.DbFirst.Model;
 using EagleDigital.DbFirst.Repositories;
+using EagleDigital.Service.IServices;
 using EagleDigital.Service.Services;
 
 namespace EagleDigital.Web
@@ -44,6 +45,12 @@ namespace EagleDigital.Web
 
             builder.RegisterType<EntityRepository<Domain>>().As<IEntityRepository<Domain>>();
             builder.RegisterType<DomainService>().As<IDomainService>();
+
+            builder.RegisterType<EntityRepository<DomainInfor>>().As<IEntityRepository<DomainInfor>>();
+            builder.RegisterType<DomainInforService>().As<IDomainInforService>();
+
+            builder.RegisterType<EntityRepository<TabName>>().As<IEntityRepository<TabName>>();
+            builder.RegisterType<TabNameService>().As<ITabNameService>();
 
             builder.Register(c => new MickDatabaseEntities()).As<IEntitiesContext>();
             var container = builder.Build();

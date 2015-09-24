@@ -1,9 +1,16 @@
-﻿@{
+﻿@model EagleDigital.Web.Models.DomainInforModel
+@{
     ViewBag.Title = "Domain Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="rs_digital_storage">
+@foreach(var item in Model.ListDomainInfors){
+    <text>
+      @Html.Raw(item.Content)
+    </text>
+}
+
+@*<div id="rs_digital_storage">
     <script language="JavaScript" src="@Url.Content("~/Scripts/BrightcoveExperiences.js")" type="text/javascript" space="preserve"> </script>
     <div class="hpe_overlay video_bc" id="overlay_mp4_video">
         <div class="video_wrapper">
@@ -67,4 +74,5 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
+

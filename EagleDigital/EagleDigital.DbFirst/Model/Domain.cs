@@ -14,8 +14,17 @@ namespace EagleDigital.DbFirst.Model
     
     public partial class Domain
     {
+        public Domain()
+        {
+            this.RequestProjects = new HashSet<RequestProject>();
+        }
+    
         public int Id { get; set; }
+        public int SubCategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+    
+        public virtual SubCategory SubCategory { get; set; }
+        public virtual ICollection<RequestProject> RequestProjects { get; set; }
     }
 }

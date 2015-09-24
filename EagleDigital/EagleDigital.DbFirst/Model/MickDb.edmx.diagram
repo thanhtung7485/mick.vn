@@ -5,8 +5,19 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="535f9c18e98f4fd9811e5338ad3ed808" Name="Diagram1">
-        <EntityTypeShape EntityType="MickDatabaseModel.Category" Width="1.5" PointX="0.74409600568194678" PointY="7.2647903595421415" />
-        <EntityTypeShape EntityType="MickDatabaseModel.Domain" Width="1.5" PointX="2.3175611022475926" PointY="10.393138562512183" />
+        <EntityTypeShape EntityType="MickDatabaseModel.AboutU" Width="1.5" PointX="4.8959904280006841" PointY="15.403047032376307" />
+        <EntityTypeShape EntityType="MickDatabaseModel.Category" Width="1.5" PointX="7.3567036350056076" PointY="8.4757570812831435" />
+        <EntityTypeShape EntityType="MickDatabaseModel.ContactU" Width="1.5" PointX="0.86559436883106566" PointY="6.2377314447601009" />
+        <EntityTypeShape EntityType="MickDatabaseModel.Domain" Width="1.5" PointX="7.99230257607638" PointY="18.258439906993154" />
+        <EntityTypeShape EntityType="MickDatabaseModel.DomainInfor" Width="1.5" PointX="9.74516791559065" PointY="8.9132366519948647" />
+        <EntityTypeShape EntityType="MickDatabaseModel.RequestProject" Width="1.5" PointX="3.2507494349268962" PointY="12.096134772569004" />
+        <EntityTypeShape EntityType="MickDatabaseModel.SubCategory" Width="1.5" PointX="7.4719256793483737" PointY="31.637248813937067" />
+        <EntityTypeShape EntityType="MickDatabaseModel.TabName" Width="1.5" PointX="8.0648648012731528" PointY="8.450794238807072" />
+        <AssociationConnector Association="MickDatabaseModel.FK_AboutUs_TabName" />
+        <AssociationConnector Association="MickDatabaseModel.FK_SubCategory_Category" />
+        <AssociationConnector Association="MickDatabaseModel.FK_Domain_Category" />
+        <AssociationConnector Association="MickDatabaseModel.FK_RequestProject_Domain" />
+        <AssociationConnector Association="MickDatabaseModel.FK_DomainInfor_Domain" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -6,9 +6,43 @@
     <edmx:StorageModels>
     <Schema Namespace="MickDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="MickDatabaseModelStoreContainer">
+          <EntitySet Name="AboutUs" EntityType="MickDatabaseModel.Store.AboutUs" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Category" EntityType="MickDatabaseModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactUs" EntityType="MickDatabaseModel.Store.ContactUs" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Domain" EntityType="MickDatabaseModel.Store.Domain" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DomainInfor" EntityType="MickDatabaseModel.Store.DomainInfor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RequestProject" EntityType="MickDatabaseModel.Store.RequestProject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubCategory" EntityType="MickDatabaseModel.Store.SubCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TabName" EntityType="MickDatabaseModel.Store.TabName" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_AboutUs_TabName" Association="MickDatabaseModel.Store.FK_AboutUs_TabName">
+            <End Role="TabName" EntitySet="TabName" />
+            <End Role="AboutUs" EntitySet="AboutUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Domain_Category" Association="MickDatabaseModel.Store.FK_Domain_Category">
+            <End Role="SubCategory" EntitySet="SubCategory" />
+            <End Role="Domain" EntitySet="Domain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DomainInfor_Domain" Association="MickDatabaseModel.Store.FK_DomainInfor_Domain">
+            <End Role="TabName" EntitySet="TabName" />
+            <End Role="DomainInfor" EntitySet="DomainInfor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RequestProject_Domain" Association="MickDatabaseModel.Store.FK_RequestProject_Domain">
+            <End Role="Domain" EntitySet="Domain" />
+            <End Role="RequestProject" EntitySet="RequestProject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_Category" Association="MickDatabaseModel.Store.FK_SubCategory_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="SubCategory" EntitySet="SubCategory" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="AboutUs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TabNameId" Type="int" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="Id" />
@@ -17,22 +51,160 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
           <Property Name="Description" Type="nvarchar" MaxLength="1000" />
         </EntityType>
+        <EntityType Name="ContactUs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="Domain">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubCategoryId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="1000" />
         </EntityType>
+        <EntityType Name="DomainInfor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DomainId" Type="int" Nullable="false" />
+          <Property Name="TabNameId" Type="int" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RequestProject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DomainId" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SubCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TabName">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_AboutUs_TabName">
+          <End Role="TabName" Type="MickDatabaseModel.Store.TabName" Multiplicity="1" />
+          <End Role="AboutUs" Type="MickDatabaseModel.Store.AboutUs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TabName">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AboutUs">
+              <PropertyRef Name="TabNameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Domain_Category">
+          <End Role="SubCategory" Type="MickDatabaseModel.Store.SubCategory" Multiplicity="1" />
+          <End Role="Domain" Type="MickDatabaseModel.Store.Domain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Domain">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DomainInfor_Domain">
+          <End Role="TabName" Type="MickDatabaseModel.Store.TabName" Multiplicity="1" />
+          <End Role="DomainInfor" Type="MickDatabaseModel.Store.DomainInfor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TabName">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DomainInfor">
+              <PropertyRef Name="TabNameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RequestProject_Domain">
+          <End Role="Domain" Type="MickDatabaseModel.Store.Domain" Multiplicity="0..1" />
+          <End Role="RequestProject" Type="MickDatabaseModel.Store.RequestProject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Domain">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RequestProject">
+              <PropertyRef Name="DomainId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_Category">
+          <End Role="Category" Type="MickDatabaseModel.Store.Category" Multiplicity="1" />
+          <End Role="SubCategory" Type="MickDatabaseModel.Store.SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MickDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="MickDatabaseEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="AboutUs" EntityType="MickDatabaseModel.AboutU" />
           <EntitySet Name="Categories" EntityType="MickDatabaseModel.Category" />
+          <EntitySet Name="ContactUs" EntityType="MickDatabaseModel.ContactU" />
           <EntitySet Name="Domains" EntityType="MickDatabaseModel.Domain" />
+          <EntitySet Name="DomainInfors" EntityType="MickDatabaseModel.DomainInfor" />
+          <EntitySet Name="RequestProjects" EntityType="MickDatabaseModel.RequestProject" />
+          <EntitySet Name="SubCategories" EntityType="MickDatabaseModel.SubCategory" />
+          <EntitySet Name="TabNames" EntityType="MickDatabaseModel.TabName" />
+          <AssociationSet Name="FK_AboutUs_TabName" Association="MickDatabaseModel.FK_AboutUs_TabName">
+            <End Role="TabName" EntitySet="TabNames" />
+            <End Role="AboutU" EntitySet="AboutUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_Category" Association="MickDatabaseModel.FK_SubCategory_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="SubCategory" EntitySet="SubCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Domain_Category" Association="MickDatabaseModel.FK_Domain_Category">
+            <End Role="SubCategory" EntitySet="SubCategories" />
+            <End Role="Domain" EntitySet="Domains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RequestProject_Domain" Association="MickDatabaseModel.FK_RequestProject_Domain">
+            <End Role="Domain" EntitySet="Domains" />
+            <End Role="RequestProject" EntitySet="RequestProjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DomainInfor_Domain" Association="MickDatabaseModel.FK_DomainInfor_Domain">
+            <End Role="TabName" EntitySet="TabNames" />
+            <End Role="DomainInfor" EntitySet="DomainInfors" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="AboutU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="TabNameId" Nullable="false" />
+          <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TabName" Relationship="MickDatabaseModel.FK_AboutUs_TabName" FromRole="AboutU" ToRole="TabName" />
+        </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="Id" />
@@ -40,21 +212,142 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SubCategories" Relationship="MickDatabaseModel.FK_SubCategory_Category" FromRole="Category" ToRole="SubCategory" />
+        </EntityType>
+        <EntityType Name="ContactU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Domain">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SubCategory" Relationship="MickDatabaseModel.FK_Domain_Category" FromRole="Domain" ToRole="SubCategory" />
+          <NavigationProperty Name="RequestProjects" Relationship="MickDatabaseModel.FK_RequestProject_Domain" FromRole="Domain" ToRole="RequestProject" />
         </EntityType>
+        <EntityType Name="DomainInfor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DomainId" Nullable="false" />
+          <Property Type="Int32" Name="TabNameId" Nullable="false" />
+          <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TabName" Relationship="MickDatabaseModel.FK_DomainInfor_Domain" FromRole="DomainInfor" ToRole="TabName" />
+        </EntityType>
+        <EntityType Name="RequestProject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DomainId" />
+          <Property Type="String" Name="Title" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Contact" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Domain" Relationship="MickDatabaseModel.FK_RequestProject_Domain" FromRole="RequestProject" ToRole="Domain" />
+        </EntityType>
+        <EntityType Name="SubCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Category" Relationship="MickDatabaseModel.FK_SubCategory_Category" FromRole="SubCategory" ToRole="Category" />
+          <NavigationProperty Name="Domains" Relationship="MickDatabaseModel.FK_Domain_Category" FromRole="SubCategory" ToRole="Domain" />
+        </EntityType>
+        <EntityType Name="TabName">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AboutUs" Relationship="MickDatabaseModel.FK_AboutUs_TabName" FromRole="TabName" ToRole="AboutU" />
+          <NavigationProperty Name="DomainInfors" Relationship="MickDatabaseModel.FK_DomainInfor_Domain" FromRole="TabName" ToRole="DomainInfor" />
+        </EntityType>
+        <Association Name="FK_AboutUs_TabName">
+          <End Type="MickDatabaseModel.TabName" Role="TabName" Multiplicity="1" />
+          <End Type="MickDatabaseModel.AboutU" Role="AboutU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TabName">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AboutU">
+              <PropertyRef Name="TabNameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_Category">
+          <End Type="MickDatabaseModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="MickDatabaseModel.SubCategory" Role="SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Domain_Category">
+          <End Type="MickDatabaseModel.SubCategory" Role="SubCategory" Multiplicity="1" />
+          <End Type="MickDatabaseModel.Domain" Role="Domain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Domain">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RequestProject_Domain">
+          <End Type="MickDatabaseModel.Domain" Role="Domain" Multiplicity="0..1" />
+          <End Type="MickDatabaseModel.RequestProject" Role="RequestProject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Domain">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RequestProject">
+              <PropertyRef Name="DomainId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DomainInfor_Domain">
+          <End Type="MickDatabaseModel.TabName" Role="TabName" Multiplicity="1" />
+          <End Type="MickDatabaseModel.DomainInfor" Role="DomainInfor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TabName">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DomainInfor">
+              <PropertyRef Name="TabNameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="MickDatabaseModelStoreContainer" CdmEntityContainer="MickDatabaseEntities">
+          <EntitySetMapping Name="AboutUs">
+            <EntityTypeMapping TypeName="MickDatabaseModel.AboutU">
+              <MappingFragment StoreEntitySet="AboutUs">
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="TabNameId" ColumnName="TabNameId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="MickDatabaseModel.Category">
               <MappingFragment StoreEntitySet="Category">
@@ -64,10 +357,58 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ContactUs">
+            <EntityTypeMapping TypeName="MickDatabaseModel.ContactU">
+              <MappingFragment StoreEntitySet="ContactUs">
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Domains">
             <EntityTypeMapping TypeName="MickDatabaseModel.Domain">
               <MappingFragment StoreEntitySet="Domain">
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DomainInfors">
+            <EntityTypeMapping TypeName="MickDatabaseModel.DomainInfor">
+              <MappingFragment StoreEntitySet="DomainInfor">
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="TabNameId" ColumnName="TabNameId" />
+                <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RequestProjects">
+            <EntityTypeMapping TypeName="MickDatabaseModel.RequestProject">
+              <MappingFragment StoreEntitySet="RequestProject">
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCategories">
+            <EntityTypeMapping TypeName="MickDatabaseModel.SubCategory">
+              <MappingFragment StoreEntitySet="SubCategory">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TabNames">
+            <EntityTypeMapping TypeName="MickDatabaseModel.TabName">
+              <MappingFragment StoreEntitySet="TabName">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

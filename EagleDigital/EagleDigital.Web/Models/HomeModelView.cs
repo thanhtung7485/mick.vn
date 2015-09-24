@@ -10,5 +10,6 @@ namespace EagleDigital.Web.Models
     {
         public List<Domain> ListDomain { get; set; } 
         public List<Category> ListCategory { get; set; } 
+         
     }
 }

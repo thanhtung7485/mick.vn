@@ -34,6 +34,7 @@ namespace EagleDigital.Service.Services
             var domainDetails = new Domain();
             domainDetails.Name = domain.Name;
             domainDetails.Description = domain.Description;
+            domainDetails.SubCategoryId = domain.SubCategoryId;
 
             domainDetails = _domainRepository.InsertOnCommit(domainDetails);
             _domainRepository.CommitChanges();
@@ -45,6 +46,7 @@ namespace EagleDigital.Service.Services
             var domainDetails = _domainRepository.Get(domain.Id);
             domainDetails.Name = domain.Name;
             domainDetails.Description = domain.Description;
+            domainDetails.SubCategoryId = domain.SubCategoryId;
             _domainRepository.CommitChanges();
             return domainDetails;
         }

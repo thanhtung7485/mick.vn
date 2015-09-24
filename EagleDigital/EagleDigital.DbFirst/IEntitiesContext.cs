@@ -11,8 +11,14 @@ namespace EagleDigital.DbFirst
 {
     public interface IEntitiesContext : IDisposable
     {
-         DbSet<Category> Categories { get; set; }
-         DbSet<Domain> Domains { get; set; }
+         DbSet<AboutU> AboutUs { get; set; }
+        DbSet<Category> Categories { get; set; }
+        DbSet<ContactU> ContactUs { get; set; }
+        DbSet<Domain> Domains { get; set; }
+        DbSet<DomainInfor> DomainInfors { get; set; }
+        DbSet<RequestProject> RequestProjects { get; set; }
+        DbSet<SubCategory> SubCategories { get; set; }
+        DbSet<TabName> TabNames { get; set; }
 
 
          int SaveChanges();

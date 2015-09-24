@@ -136,7 +136,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DomainDetailsModel.cs" />
+    <Compile Include="Models\DomainInforModel.cs" />
     <Compile Include="Models\HomeModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
