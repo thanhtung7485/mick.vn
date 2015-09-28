@@ -1,0 +1,11 @@
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.csprojResolveAssemblyReference.cache
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EagleDigital.CodeFirst.dll.config
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.xml
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.AddBirthday.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.csproj.GenerateResource.Cache
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.AddBirthday2.resources
