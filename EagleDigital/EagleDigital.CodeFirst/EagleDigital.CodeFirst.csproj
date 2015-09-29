@@ -49,20 +49,44 @@
   <ItemGroup>
     <Compile Include="IEntitiesContext.cs" />
     <Compile Include="MickContext.cs" />
-    <Compile Include="Migrations\201509281745001_AddBirthday.cs" />
-    <Compile Include="Migrations\201509281745001_AddBirthday.Designer.cs">
-      <DependentUpon>201509281745001_AddBirthday.cs</DependentUpon>
+    <Compile Include="Migrations\201509290401564_first.cs" />
+    <Compile Include="Migrations\201509290401564_first.Designer.cs">
+      <DependentUpon>201509290401564_first.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509281748405_AddBirthday2.cs" />
-    <Compile Include="Migrations\201509281748405_AddBirthday2.Designer.cs">
-      <DependentUpon>201509281748405_AddBirthday2.cs</DependentUpon>
+    <Compile Include="Migrations\201509290405426_22.cs" />
+    <Compile Include="Migrations\201509290405426_22.Designer.cs">
+      <DependentUpon>201509290405426_22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509290420489_removerequried.cs" />
+    <Compile Include="Migrations\201509290420489_removerequried.Designer.cs">
+      <DependentUpon>201509290420489_removerequried.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509290424400_abc.cs" />
+    <Compile Include="Migrations\201509290424400_abc.Designer.cs">
+      <DependentUpon>201509290424400_abc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509290425450_abcd.cs" />
+    <Compile Include="Migrations\201509290425450_abcd.Designer.cs">
+      <DependentUpon>201509290425450_abcd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509290428557_abcd1.cs" />
+    <Compile Include="Migrations\201509290428557_abcd1.Designer.cs">
+      <DependentUpon>201509290428557_abcd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509290429240_abcd2.cs" />
+    <Compile Include="Migrations\201509290429240_abcd2.Designer.cs">
+      <DependentUpon>201509290429240_abcd2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AboutUs.cs" />
     <Compile Include="Models\BusinessBase.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Invoice.cs" />
-    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ContactUs.cs" />
+    <Compile Include="Models\Domain.cs" />
+    <Compile Include="Models\DomainInfor.cs" />
+    <Compile Include="Models\RequestProject.cs" />
+    <Compile Include="Models\SubCategory.cs" />
+    <Compile Include="Models\TabName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EntityRepository.cs" />
     <Compile Include="Repositories\IEntityRepository.cs" />
@@ -72,19 +96,34 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509281745001_AddBirthday.resx">
-      <DependentUpon>201509281745001_AddBirthday.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509281748405_AddBirthday2.resx">
-      <DependentUpon>201509281748405_AddBirthday2.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Infrastructure\Elmah.SqlServer.sql" />
     <Content Include="Infrastructure\CodeFirstCommand.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509290401564_first.resx">
+      <DependentUpon>201509290401564_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509290405426_22.resx">
+      <DependentUpon>201509290405426_22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509290420489_removerequried.resx">
+      <DependentUpon>201509290420489_removerequried.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509290424400_abc.resx">
+      <DependentUpon>201509290424400_abc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509290425450_abcd.resx">
+      <DependentUpon>201509290425450_abcd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509290428557_abcd1.resx">
+      <DependentUpon>201509290428557_abcd1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509290429240_abcd2.resx">
+      <DependentUpon>201509290429240_abcd2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

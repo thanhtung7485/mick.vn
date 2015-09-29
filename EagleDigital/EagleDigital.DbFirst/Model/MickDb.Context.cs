@@ -33,5 +33,6 @@ namespace EagleDigital.DbFirst.Model
         public DbSet<RequestProject> RequestProjects { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<TabName> TabNames { get; set; }
+        public DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

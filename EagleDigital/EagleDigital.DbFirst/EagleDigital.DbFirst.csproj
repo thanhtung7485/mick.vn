@@ -116,6 +116,9 @@
     <Compile Include="Model\SubCategory.cs">
       <DependentUpon>MickDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\sysdiagram.cs">
+      <DependentUpon>MickDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\TabName.cs">
       <DependentUpon>MickDb.tt</DependentUpon>
     </Compile>
@@ -146,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\Note.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -18,6 +18,8 @@
         <AssociationConnector Association="MickDatabaseModel.FK_Domain_Category" />
         <AssociationConnector Association="MickDatabaseModel.FK_RequestProject_Domain" />
         <AssociationConnector Association="MickDatabaseModel.FK_DomainInfor_Domain" />
+        <EntityTypeShape EntityType="MickDatabaseModel.sysdiagram" Width="1.5" PointX="9.0065830280103647" PointY="18.621971004932174" />
+        <AssociationConnector Association="MickDatabaseModel.FK_DomainInfor_Domain1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

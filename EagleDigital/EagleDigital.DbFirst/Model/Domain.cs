@@ -17,6 +17,7 @@ namespace EagleDigital.DbFirst.Model
         public Domain()
         {
             this.RequestProjects = new HashSet<RequestProject>();
+            this.DomainInfors = new HashSet<DomainInfor>();
         }
     
         public int Id { get; set; }
@@ -26,5 +27,6 @@ namespace EagleDigital.DbFirst.Model
     
         public virtual SubCategory SubCategory { get; set; }
         public virtual ICollection<RequestProject> RequestProjects { get; set; }
+        public virtual ICollection<DomainInfor> DomainInfors { get; set; }
     }
 }

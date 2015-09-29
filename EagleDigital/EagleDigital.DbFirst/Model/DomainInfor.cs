@@ -20,5 +20,6 @@ namespace EagleDigital.DbFirst.Model
         public string Content { get; set; }
     
         public virtual TabName TabName { get; set; }
+        public virtual Domain Domain { get; set; }
     }
 }

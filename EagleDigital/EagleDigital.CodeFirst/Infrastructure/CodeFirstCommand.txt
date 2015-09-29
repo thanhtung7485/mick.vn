@@ -1,3 +1,5 @@
-﻿Enable-Migrations
+﻿Enable-Migrations 
+
+
 Add-Migration [NameAddMiragion]
 Update-Database

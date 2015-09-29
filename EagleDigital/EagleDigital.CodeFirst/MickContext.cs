@@ -15,35 +15,48 @@ namespace EagleDigital.CodeFirst
             : base("MickContext")
         { }
 
-  
-        public IDbSet<Person> People { get; set; }
-        public IDbSet<Employee> Employees { get; set; }
-        public IDbSet<Customer> Customers { get; set; }
-        public IDbSet<Invoice> Invoices { get; set; }
-      
+
+        public DbSet<AboutUs> AboutUs { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<ContactUs> ContactUs { get; set; }
+        public DbSet<Domain> Domains { get; set; }
+        public DbSet<DomainInfor> DomainInfors { get; set; }
+        public DbSet<RequestProject> RequestProjects { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<TabName> TabNames { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
+            modelBuilder.Entity<AboutUs>()
+                .HasRequired(c => c.TabName)
+                .WithMany(e => e.AboutUs)
+                .HasForeignKey(c => c.TabNameId);
 
+            modelBuilder.Entity<ContactUs>();
 
+            modelBuilder.Entity<SubCategory>()
+                .HasRequired(d => d.Category)
+                .WithMany(e => e.SubCategories)
+                .HasForeignKey(c => c.CategoryId);
 
-            modelBuilder.Entity<Customer>()
-                .HasOptional(c => c.SupportRep)
-                .WithMany(e => e.Customers)
-                .HasForeignKey(c => c.SupportRepId);
+            modelBuilder.Entity<Domain>()
+                .HasRequired(d => d.SubCategory)
+                .WithMany(e => e.Domains)
+                .HasForeignKey(c => c.SubCategoryId);
 
-            modelBuilder.Entity<Employee>()
-                .HasOptional(e => e.Superior)
-                .WithMany(s => s.Subordinates)
-                .HasForeignKey(c => c.ReportsTo);
+            modelBuilder.Entity<DomainInfor>()
+                 .HasRequired(d => d.Domain)
+                 .WithMany(e => e.DomainInfors)
+                 .HasForeignKey(c => c.DomainId);
 
-            modelBuilder.Entity<Invoice>()
-                .HasRequired(i => i.Customer)
-                .WithMany(c => c.Invoices)
-                .HasForeignKey(i => i.CustomerId);  
+            modelBuilder.Entity<RequestProject>()
+                 .HasOptional(d => d.Domain)
+                 .WithMany(e => e.RequestProjects)
+                 .HasForeignKey(c => c.DomainId);
+
         }
-
     }
 }

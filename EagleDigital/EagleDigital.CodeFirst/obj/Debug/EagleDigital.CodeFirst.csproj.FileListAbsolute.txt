@@ -6,6 +6,11 @@ D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EagleDigital.CodeFirst.dll.config
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.dll
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.xml
-D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.AddBirthday.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.first.resources
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.csproj.GenerateResource.Cache
-D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.AddBirthday2.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations._22.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.removerequried.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.abc.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.abcd.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.abcd1.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.abcd2.resources

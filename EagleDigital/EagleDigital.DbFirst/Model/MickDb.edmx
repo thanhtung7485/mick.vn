@@ -13,6 +13,7 @@
           <EntitySet Name="DomainInfor" EntityType="MickDatabaseModel.Store.DomainInfor" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="RequestProject" EntityType="MickDatabaseModel.Store.RequestProject" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="SubCategory" EntityType="MickDatabaseModel.Store.SubCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="MickDatabaseModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TabName" EntityType="MickDatabaseModel.Store.TabName" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_AboutUs_TabName" Association="MickDatabaseModel.Store.FK_AboutUs_TabName">
             <End Role="TabName" EntitySet="TabName" />
@@ -24,6 +25,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_DomainInfor_Domain" Association="MickDatabaseModel.Store.FK_DomainInfor_Domain">
             <End Role="TabName" EntitySet="TabName" />
+            <End Role="DomainInfor" EntitySet="DomainInfor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DomainInfor_Domain1" Association="MickDatabaseModel.Store.FK_DomainInfor_Domain1">
+            <End Role="Domain" EntitySet="Domain" />
             <End Role="DomainInfor" EntitySet="DomainInfor" />
           </AssociationSet>
           <AssociationSet Name="FK_RequestProject_Domain" Association="MickDatabaseModel.Store.FK_RequestProject_Domain">
@@ -95,6 +100,16 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="TabName">
           <Key>
             <PropertyRef Name="Id" />
@@ -135,6 +150,18 @@
             </Principal>
             <Dependent Role="DomainInfor">
               <PropertyRef Name="TabNameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DomainInfor_Domain1">
+          <End Role="Domain" Type="MickDatabaseModel.Store.Domain" Multiplicity="1" />
+          <End Role="DomainInfor" Type="MickDatabaseModel.Store.DomainInfor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Domain">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DomainInfor">
+              <PropertyRef Name="DomainId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -195,6 +222,11 @@
             <End Role="TabName" EntitySet="TabNames" />
             <End Role="DomainInfor" EntitySet="DomainInfors" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="MickDatabaseModel.sysdiagram" />
+          <AssociationSet Name="FK_DomainInfor_Domain1" Association="MickDatabaseModel.FK_DomainInfor_Domain1">
+            <End Role="Domain" EntitySet="Domains" />
+            <End Role="DomainInfor" EntitySet="DomainInfors" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AboutU">
           <Key>
@@ -231,6 +263,7 @@
           <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SubCategory" Relationship="MickDatabaseModel.FK_Domain_Category" FromRole="Domain" ToRole="SubCategory" />
           <NavigationProperty Name="RequestProjects" Relationship="MickDatabaseModel.FK_RequestProject_Domain" FromRole="Domain" ToRole="RequestProject" />
+          <NavigationProperty Name="DomainInfors" Relationship="MickDatabaseModel.FK_DomainInfor_Domain1" FromRole="Domain" ToRole="DomainInfor" />
         </EntityType>
         <EntityType Name="DomainInfor">
           <Key>
@@ -241,6 +274,7 @@
           <Property Type="Int32" Name="TabNameId" Nullable="false" />
           <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TabName" Relationship="MickDatabaseModel.FK_DomainInfor_Domain" FromRole="DomainInfor" ToRole="TabName" />
+          <NavigationProperty Name="Domain" Relationship="MickDatabaseModel.FK_DomainInfor_Domain1" FromRole="DomainInfor" ToRole="Domain" />
         </EntityType>
         <EntityType Name="RequestProject">
           <Key>
@@ -333,6 +367,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_DomainInfor_Domain1">
+          <End Type="MickDatabaseModel.Domain" Role="Domain" Multiplicity="1" />
+          <End Type="MickDatabaseModel.DomainInfor" Role="DomainInfor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Domain">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DomainInfor">
+              <PropertyRef Name="DomainId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -411,6 +467,17 @@
               <MappingFragment StoreEntitySet="TabName">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MickDatabaseModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
