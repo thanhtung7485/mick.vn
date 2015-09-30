@@ -1001,7 +1001,9 @@
     <Content Include="Scripts\qualtricsSurvey.js" />
     <Content Include="Scripts\target.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1022,9 +1024,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EagleDigital.DbFirst\EagleDigital.DbFirst.csproj">
-      <Project>{eb3bc816-eed2-4834-9ca9-3a0e691f042d}</Project>
-      <Name>EagleDigital.DbFirst</Name>
+    <ProjectReference Include="..\EagleDigital.CodeFirst\EagleDigital.CodeFirst.csproj">
+      <Project>{011440b6-5551-45a0-b343-db14f0781287}</Project>
+      <Name>EagleDigital.CodeFirst</Name>
     </ProjectReference>
     <ProjectReference Include="..\EagleDigital.Service\EagleDigital.Service.csproj">
       <Project>{b0059b77-5b36-4eb2-a2f5-e298e25c5400}</Project>

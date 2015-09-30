@@ -24,9 +24,9 @@ D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Debug\EagleDigital.Web.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Debug\EagleDigital.Web.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.Integration.Mvc.dll
-D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.DbFirst.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.Service.dll
-D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.DbFirst.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.Service.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.xml
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.Integration.Mvc.xml
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.CodeFirst.pdb

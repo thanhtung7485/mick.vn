@@ -9,9 +9,12 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
-using EagleDigital.DbFirst;
-using EagleDigital.DbFirst.Model;
-using EagleDigital.DbFirst.Repositories;
+//using EagleDigital.DbFirst;
+//using EagleDigital.DbFirst.Model;
+//using EagleDigital.DbFirst.Repositories;
+using EagleDigital.CodeFirst;
+using EagleDigital.CodeFirst.Models;
+using EagleDigital.CodeFirst.Repositories;
 using EagleDigital.Service.IServices;
 using EagleDigital.Service.Services;
 
@@ -24,6 +27,7 @@ namespace EagleDigital.Web
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new EagleDigital.CodeFirst.DataCommon.InsertDataCommon());
 
             RegisterDbFirstComponents();
             AreaRegistration.RegisterAllAreas();
@@ -52,7 +56,8 @@ namespace EagleDigital.Web
             builder.RegisterType<EntityRepository<TabName>>().As<IEntityRepository<TabName>>();
             builder.RegisterType<TabNameService>().As<ITabNameService>();
 
-            builder.Register(c => new MickDatabaseEntities()).As<IEntitiesContext>();
+            //builder.Register(c => new MickDatabaseEntities()).As<IEntitiesContext>();
+            builder.Register(c => new MickContext()).As<IEntitiesContext>();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
