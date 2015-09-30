@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EagleDigital.DbFirst.Model;
+using EagleDigital.CodeFirst.Models;
+//using EagleDigital.DbFirst.Model;
 
 namespace EagleDigital.Service.Services
 {

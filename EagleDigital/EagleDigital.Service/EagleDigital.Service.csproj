@@ -80,13 +80,13 @@
     <Compile Include="Services\TabNameService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EagleDigital.DbFirst\EagleDigital.DbFirst.csproj">
-      <Project>{eb3bc816-eed2-4834-9ca9-3a0e691f042d}</Project>
-      <Name>EagleDigital.DbFirst</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\EagleDigital.CodeFirst\EagleDigital.CodeFirst.csproj">
+      <Project>{011440b6-5551-45a0-b343-db14f0781287}</Project>
+      <Name>EagleDigital.CodeFirst</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

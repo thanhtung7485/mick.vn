@@ -3,9 +3,7 @@ D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.Service.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Service\obj\Debug\EagleDigital.Service.csprojResolveAssemblyReference.cache
 D:\mick.vn\EagleDigital\EagleDigital.Service\obj\Debug\EagleDigital.Service.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\obj\Debug\EagleDigital.Service.pdb
-D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.DbFirst.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EntityFramework.dll
-D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.DbFirst.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EntityFramework.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.Helpers.dll
@@ -20,3 +18,5 @@ D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.Razor.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.WebPages.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.WebPages.Razor.xml
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.CodeFirst.pdb
