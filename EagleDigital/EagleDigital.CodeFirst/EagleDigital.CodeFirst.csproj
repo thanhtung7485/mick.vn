@@ -81,6 +81,7 @@
     <Content Include="Infrastructure\Congiguration.txt" />
     <Content Include="Infrastructure\Elmah.SqlServer.sql" />
     <Content Include="Infrastructure\CodeFirstCommand.txt" />
+    <Content Include="Infrastructure\ProjectInfor.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201509300431412_ff.resx">
