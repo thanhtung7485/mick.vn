@@ -47,35 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataCommon\InsertDataCommon.cs" />
     <Compile Include="IEntitiesContext.cs" />
     <Compile Include="MickContext.cs" />
-    <Compile Include="Migrations\201509290401564_first.cs" />
-    <Compile Include="Migrations\201509290401564_first.Designer.cs">
-      <DependentUpon>201509290401564_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509290405426_22.cs" />
-    <Compile Include="Migrations\201509290405426_22.Designer.cs">
-      <DependentUpon>201509290405426_22.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509290420489_removerequried.cs" />
-    <Compile Include="Migrations\201509290420489_removerequried.Designer.cs">
-      <DependentUpon>201509290420489_removerequried.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509290424400_abc.cs" />
-    <Compile Include="Migrations\201509290424400_abc.Designer.cs">
-      <DependentUpon>201509290424400_abc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509290425450_abcd.cs" />
-    <Compile Include="Migrations\201509290425450_abcd.Designer.cs">
-      <DependentUpon>201509290425450_abcd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509290428557_abcd1.cs" />
-    <Compile Include="Migrations\201509290428557_abcd1.Designer.cs">
-      <DependentUpon>201509290428557_abcd1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509290429240_abcd2.cs" />
-    <Compile Include="Migrations\201509290429240_abcd2.Designer.cs">
-      <DependentUpon>201509290429240_abcd2.cs</DependentUpon>
+    <Compile Include="Migrations\201509300431412_ff.cs" />
+    <Compile Include="Migrations\201509300431412_ff.Designer.cs">
+      <DependentUpon>201509300431412_ff.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AboutUs.cs" />
@@ -93,36 +70,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Constants\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Infrastructure\Congiguration.txt" />
     <Content Include="Infrastructure\Elmah.SqlServer.sql" />
     <Content Include="Infrastructure\CodeFirstCommand.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509290401564_first.resx">
-      <DependentUpon>201509290401564_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509290405426_22.resx">
-      <DependentUpon>201509290405426_22.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509290420489_removerequried.resx">
-      <DependentUpon>201509290420489_removerequried.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509290424400_abc.resx">
-      <DependentUpon>201509290424400_abc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509290425450_abcd.resx">
-      <DependentUpon>201509290425450_abcd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509290428557_abcd1.resx">
-      <DependentUpon>201509290428557_abcd1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509290429240_abcd2.resx">
-      <DependentUpon>201509290429240_abcd2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509300431412_ff.resx">
+      <DependentUpon>201509300431412_ff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

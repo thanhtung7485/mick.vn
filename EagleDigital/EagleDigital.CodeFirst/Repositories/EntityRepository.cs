@@ -7,8 +7,7 @@ using EagleDigital.CodeFirst.Models;
 
 namespace EagleDigital.CodeFirst.Repositories
 {
-    public class EntityRepository<T> : IEntityRepository<T>
-        where T : BusinessBase
+    public class EntityRepository<T> : IEntityRepository<T> where T : class
     {
 
         private readonly IEntitiesContext _context;
@@ -41,8 +40,8 @@ namespace EagleDigital.CodeFirst.Repositories
         public T InsertOnCommit(T entity)
         {
             _context.Set<T>().Add(entity);
-            entity.InsAt = DateTime.Now;
-            entity.UpdAt = DateTime.Now;
+            //entity.InsAt = DateTime.Now;
+            //entity.UpdAt = DateTime.Now;
             return entity;
         }
     }

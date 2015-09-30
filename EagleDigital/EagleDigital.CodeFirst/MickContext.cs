@@ -57,6 +57,9 @@ namespace EagleDigital.CodeFirst
                  .WithMany(e => e.RequestProjects)
                  .HasForeignKey(c => c.DomainId);
 
+
+            
+
         }
     }
 }

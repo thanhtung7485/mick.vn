@@ -5,13 +5,13 @@ namespace EagleDigital.CodeFirst.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class abcd1 : IMigrationMetadata
+    public sealed partial class ff : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(abcd1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ff));
         
         string IMigrationMetadata.Id
         {
-            get { return "201509290428557_abcd1"; }
+            get { return "201509300431412_ff"; }
         }
         
         string IMigrationMetadata.Source
