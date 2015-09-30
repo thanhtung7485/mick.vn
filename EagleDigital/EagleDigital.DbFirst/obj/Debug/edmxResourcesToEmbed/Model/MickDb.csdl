@@ -29,6 +29,11 @@
       <End Role="TabName" EntitySet="TabNames" />
       <End Role="DomainInfor" EntitySet="DomainInfors" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="MickDatabaseModel.sysdiagram" />
+    <AssociationSet Name="FK_DomainInfor_Domain1" Association="MickDatabaseModel.FK_DomainInfor_Domain1">
+      <End Role="Domain" EntitySet="Domains" />
+      <End Role="DomainInfor" EntitySet="DomainInfors" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="AboutU">
     <Key>
@@ -65,6 +70,7 @@
     <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="SubCategory" Relationship="MickDatabaseModel.FK_Domain_Category" FromRole="Domain" ToRole="SubCategory" />
     <NavigationProperty Name="RequestProjects" Relationship="MickDatabaseModel.FK_RequestProject_Domain" FromRole="Domain" ToRole="RequestProject" />
+    <NavigationProperty Name="DomainInfors" Relationship="MickDatabaseModel.FK_DomainInfor_Domain1" FromRole="Domain" ToRole="DomainInfor" />
   </EntityType>
   <EntityType Name="DomainInfor">
     <Key>
@@ -75,6 +81,7 @@
     <Property Type="Int32" Name="TabNameId" Nullable="false" />
     <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="TabName" Relationship="MickDatabaseModel.FK_DomainInfor_Domain" FromRole="DomainInfor" ToRole="TabName" />
+    <NavigationProperty Name="Domain" Relationship="MickDatabaseModel.FK_DomainInfor_Domain1" FromRole="DomainInfor" ToRole="Domain" />
   </EntityType>
   <EntityType Name="RequestProject">
     <Key>
@@ -164,6 +171,28 @@
       </Principal>
       <Dependent Role="DomainInfor">
         <PropertyRef Name="TabNameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_DomainInfor_Domain1">
+    <End Type="MickDatabaseModel.Domain" Role="Domain" Multiplicity="1" />
+    <End Type="MickDatabaseModel.DomainInfor" Role="DomainInfor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Domain">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DomainInfor">
+        <PropertyRef Name="DomainId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
