@@ -132,12 +132,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\SiteView\Controllers\HomeController.cs" />
+    <Compile Include="Areas\SiteView\Models\DomainInforModel.cs" />
+    <Compile Include="Areas\SiteView\Models\HomeModelView.cs" />
+    <Compile Include="Areas\SiteView\SiteViewAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DomainInforModel.cs" />
-    <Compile Include="Models\HomeModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +219,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ajax" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\SiteView\Views\Web.config" />
+    <Content Include="Areas\SiteView\Views\Home\Index.cshtml" />
+    <Content Include="Areas\SiteView\Views\Home\DomainDetail.cshtml" />
     <None Include="Properties\PublishProfiles\Mick.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\84e4fe5be6c28991615fbd51f7d4007a.js" />
@@ -1014,11 +1021,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\DomainDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\SiteView\Views\Shared\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
