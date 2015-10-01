@@ -1,6 +1,5 @@
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.Service.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.Service.pdb
-D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.DbFirst.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\Microsoft.Web.Infrastructure.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.Helpers.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.Mvc.dll
@@ -9,7 +8,6 @@ D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.WebPages.Dep
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.WebPages.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.WebPages.Razor.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EntityFramework.dll
-D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.DbFirst.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.Helpers.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.Mvc.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\System.Web.Razor.xml
@@ -20,3 +18,8 @@ D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EntityFramework.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\obj\Release\EagleDigital.Service.csprojResolveAssemblyReference.cache
 D:\mick.vn\EagleDigital\EagleDigital.Service\obj\Release\EagleDigital.Service.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\obj\Release\EagleDigital.Service.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EagleDigital.Service.dll.config
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EntityFramework.SqlServer.dll
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Release\EntityFramework.SqlServer.xml

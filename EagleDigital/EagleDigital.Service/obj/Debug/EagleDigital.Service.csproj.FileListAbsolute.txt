@@ -20,3 +20,6 @@ D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.WebPages.Deplo
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\System.Web.WebPages.Razor.xml
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.CodeFirst.dll
 D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EagleDigital.Service.dll.config
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EntityFramework.SqlServer.dll
+D:\mick.vn\EagleDigital\EagleDigital.Service\bin\Debug\EntityFramework.SqlServer.xml
