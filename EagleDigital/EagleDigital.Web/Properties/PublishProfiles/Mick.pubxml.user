@@ -33,16 +33,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2015 00:42:12</publishTime>
     </File>
     <File Include="bin/EagleDigital.CodeFirst.dll">
-      <publishTime>10/02/2015 00:13:23</publishTime>
+      <publishTime>10/02/2015 00:24:22</publishTime>
     </File>
     <File Include="bin/EagleDigital.DbFirst.dll">
       <publishTime>09/11/2015 22:26:11</publishTime>
     </File>
     <File Include="bin/EagleDigital.Service.dll">
-      <publishTime>10/02/2015 00:13:23</publishTime>
+      <publishTime>10/02/2015 00:24:22</publishTime>
     </File>
     <File Include="bin/EagleDigital.Web.dll">
-      <publishTime>10/02/2015 00:13:24</publishTime>
+      <publishTime>10/02/2015 00:24:23</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/01/2015 23:52:30</publishTime>
