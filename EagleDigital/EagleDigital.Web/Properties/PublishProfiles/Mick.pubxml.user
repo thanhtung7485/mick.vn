@@ -8,8 +8,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Deploye 710\mick.vn first vs 30-9\TempCode</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Areas/Admin/Views/Web.config">
+      <publishTime>09/30/2015 14:14:38</publishTime>
+    </File>
+    <File Include="Areas/SiteView/Views/Home/DomainDetail.cshtml">
+      <publishTime>09/30/2015 21:20:40</publishTime>
+    </File>
+    <File Include="Areas/SiteView/Views/Home/Index.cshtml">
+      <publishTime>09/30/2015 21:22:52</publishTime>
+    </File>
+    <File Include="Areas/SiteView/Views/Web.config">
+      <publishTime>09/30/2015 14:16:08</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/09/2015 23:12:54</publishTime>
     </File>
@@ -19,17 +32,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Autofac.Integration.Mvc.dll">
       <publishTime>09/10/2015 00:42:12</publishTime>
     </File>
+    <File Include="bin/EagleDigital.CodeFirst.dll">
+      <publishTime>10/02/2015 00:13:23</publishTime>
+    </File>
     <File Include="bin/EagleDigital.DbFirst.dll">
       <publishTime>09/11/2015 22:26:11</publishTime>
     </File>
     <File Include="bin/EagleDigital.Service.dll">
-      <publishTime>09/11/2015 22:26:12</publishTime>
+      <publishTime>10/02/2015 00:13:23</publishTime>
     </File>
     <File Include="bin/EagleDigital.Web.dll">
-      <publishTime>09/11/2015 22:26:12</publishTime>
+      <publishTime>10/02/2015 00:13:24</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>09/09/2015 23:12:44</publishTime>
+      <publishTime>10/01/2015 23:52:30</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/01/2015 23:52:30</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>09/09/2015 23:12:51</publishTime>
@@ -79,11 +98,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/hps-fontface-core.css">
       <publishTime>09/11/2015 21:12:29</publishTime>
     </File>
+    <File Include="Content/Image/eagle.png">
+      <publishTime>09/12/2015 14:28:49</publishTime>
+    </File>
     <File Include="Content/Image/hp-logo-pr.gif">
       <publishTime>09/11/2015 21:12:31</publishTime>
     </File>
     <File Include="Content/Image/hp-logo.gif">
-      <publishTime>09/11/2015 21:12:31</publishTime>
+      <publishTime>09/12/2015 14:18:02</publishTime>
     </File>
     <File Include="Content/Image/hpe_US_EN_HHO_PSG_Mod-1u_new-desktops_20150628.jpg">
       <publishTime>09/11/2015 21:12:31</publishTime>
@@ -97,8 +119,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/Image/hpe_US_EN_SMB_PSG_Mod-3u_win10-upgrade-smb-v1_20150622.jpg">
       <publishTime>09/11/2015 21:12:31</publishTime>
     </File>
+    <File Include="Content/Image/performance-hero_v3_tcm_245_1607399.jpg">
+      <publishTime>09/12/2015 11:09:12</publishTime>
+    </File>
     <File Include="Content/Image/s.gif">
       <publishTime>09/11/2015 21:12:31</publishTime>
+    </File>
+    <File Include="Content/ot-layout.css">
+      <publishTime>09/12/2015 10:50:12</publishTime>
+    </File>
+    <File Include="Content/retail-solutions_layout.css">
+      <publishTime>09/12/2015 10:50:28</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/11/2015 21:12:31</publishTime>
@@ -269,7 +300,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2015 00:38:30</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>09/10/2015 00:42:12</publishTime>
+      <publishTime>10/01/2015 23:52:35</publishTime>
     </File>
     <File Include="Scripts/84e4fe5be6c28991615fbd51f7d4007a.js">
       <publishTime>09/11/2015 21:09:57</publishTime>
@@ -315,6 +346,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/Bootstrap.js">
       <publishTime>09/11/2015 21:09:57</publishTime>
+    </File>
+    <File Include="Scripts/BrightcoveExperiences.js">
+      <publishTime>09/12/2015 11:01:46</publishTime>
     </File>
     <File Include="Scripts/caas-privacy-cookie-3.1.js">
       <publishTime>09/11/2015 21:09:57</publishTime>
@@ -2627,7 +2661,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2015 00:38:30</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/11/2015 21:44:27</publishTime>
+      <publishTime>09/29/2015 18:31:34</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/10/2015 00:38:30</publishTime>
@@ -2636,7 +2670,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2015 00:38:30</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/11/2015 22:26:13</publishTime>
+      <publishTime>10/02/2015 00:13:28</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -30,3 +30,5 @@ D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.xml
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.Integration.Mvc.xml
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.CodeFirst.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EntityFramework.SqlServer.dll
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EntityFramework.SqlServer.xml

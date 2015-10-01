@@ -3,7 +3,6 @@ D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.Web.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Antlr3.Runtime.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.Integration.Mvc.dll
-D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.DbFirst.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.Service.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EntityFramework.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Microsoft.Web.Infrastructure.dll
@@ -16,7 +15,6 @@ D:\mick.vn\EagleDigital\EagleDigital.Web\bin\System.Web.WebPages.Deployment.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\System.Web.WebPages.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\System.Web.WebPages.Razor.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\WebGrease.dll
-D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.DbFirst.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.Service.pdb
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.xml
 D:\mick.vn\EagleDigital\EagleDigital.Web\bin\Autofac.Integration.Mvc.xml
@@ -30,3 +28,7 @@ D:\mick.vn\EagleDigital\EagleDigital.Web\bin\System.Web.WebPages.Razor.xml
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Release\EagleDigital.Web.csprojResolveAssemblyReference.cache
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Release\EagleDigital.Web.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Release\EagleDigital.Web.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EntityFramework.SqlServer.dll
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\EntityFramework.SqlServer.xml
