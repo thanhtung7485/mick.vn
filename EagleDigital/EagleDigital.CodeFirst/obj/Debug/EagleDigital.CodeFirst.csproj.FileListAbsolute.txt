@@ -6,5 +6,7 @@ D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EagleDigital.CodeFirst.dll.config
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.dll
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.xml
-D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.ff.resources
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.Migrations.f.resources
 D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Debug\EagleDigital.CodeFirst.csproj.GenerateResource.Cache

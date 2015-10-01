@@ -11,9 +11,9 @@ namespace EagleDigital.CodeFirst
 {
     public class MickContext : DbContext, IEntitiesContext
     {
-        public MickContext()
-            : base("MickContext")
-        { }
+        //public MickContext()
+        //    : base("MickContext")
+        //{ }
 
 
         public DbSet<AboutUs> AboutUs { get; set; }

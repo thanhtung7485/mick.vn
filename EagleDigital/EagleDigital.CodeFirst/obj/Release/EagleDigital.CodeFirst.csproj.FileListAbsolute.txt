@@ -1,0 +1,12 @@
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EagleDigital.CodeFirst.dll.config
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EntityFramework.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EntityFramework.xml
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Release\EagleDigital.CodeFirst.csprojResolveAssemblyReference.cache
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Release\EagleDigital.CodeFirst.csproj.GenerateResource.Cache
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Release\EagleDigital.CodeFirst.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Release\EagleDigital.CodeFirst.pdb
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EntityFramework.SqlServer.dll
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\bin\Release\EntityFramework.SqlServer.xml
+D:\mick.vn\EagleDigital\EagleDigital.CodeFirst\obj\Release\EagleDigital.CodeFirst.Migrations.f.resources

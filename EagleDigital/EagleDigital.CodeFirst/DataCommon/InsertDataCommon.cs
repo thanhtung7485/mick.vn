@@ -11,9 +11,9 @@ namespace EagleDigital.CodeFirst.DataCommon
 {
     public class InsertDataCommon : DropCreateDatabaseIfModelChanges<MickContext>
     {
-         protected override void Seed(MickContext context)
-         {
-             var category = new List<Category>
+        protected override void Seed(MickContext context)
+        {
+            var category = new List<Category>
             { 
                     new Category
                     {
@@ -34,10 +34,10 @@ namespace EagleDigital.CodeFirst.DataCommon
                        Description = "Product"
                     }
             };
-             context.Categories.AddOrUpdate(category.ToArray());
-             context.SaveChanges();
+            context.Categories.AddOrUpdate(category.ToArray());
+            context.SaveChanges();
 
-             var subCategorys = new List<SubCategory>
+            var subCategorys = new List<SubCategory>
             {
                 new SubCategory()
                     {
@@ -48,11 +48,11 @@ namespace EagleDigital.CodeFirst.DataCommon
                     }
             };
 
-             context.SubCategories.AddOrUpdate(subCategorys.ToArray());
-             context.SaveChanges();
+            context.SubCategories.AddOrUpdate(subCategorys.ToArray());
+            context.SaveChanges();
 
 
-             var domains = new List<Domain>
+            var domains = new List<Domain>
             {
                    new Domain()
                     {
@@ -105,10 +105,10 @@ namespace EagleDigital.CodeFirst.DataCommon
                     },
             };
 
-             context.Domains.AddOrUpdate(domains.ToArray());
-             context.SaveChanges();
+            context.Domains.AddOrUpdate(domains.ToArray());
+            context.SaveChanges();
 
-             var tabNames = new List<TabName>
+            var tabNames = new List<TabName>
              {
                     new TabName()
                     {
@@ -121,73 +121,75 @@ namespace EagleDigital.CodeFirst.DataCommon
                         Name = "Tab2"
                     }
              };
-             context.TabNames.AddOrUpdate(tabNames.ToArray());
-             context.SaveChanges();
+            context.TabNames.AddOrUpdate(tabNames.ToArray());
+            context.SaveChanges();
 
-             var contentDetails =
-                 "<div id=\"rs_digital_storage\">\r\n    <script language=\"JavaScript\" src=\"/Scripts/BrightcoveExperiences.js\" type=\"text/javascript\" space=\"preserve\"> </script>\r\n    <div class=\"hpe_overlay video_bc\" id=\"overlay_mp4_video\">\r\n        <div class=\"video_wrapper\">\r\n            <!-- Begin of Brightcove Player -->\r\n            <object type=\"application/x-shockwave-flash\" data=\"http://c.brightcove.com/services/viewer/federated_f9?&amp;width=640&amp;height=360&amp;flashID=myExperience2516054781001&amp;htmlFallback=true&amp;bgcolor=%23FFFFFF&amp;playerID=1377059119001&amp;playerKey=AQ~~%2CAAABAeI3VIE~%2CN0OfmZCPaxh-U75tF8pHH0iLtpzUxRz-&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;%40videoPlayer=2516054781001&amp;autoStart=&amp;debuggerID=&amp;startTime=1442027587911\" id=\"myExperience2516054781001\" width=\"640\" height=\"360\" class=\"BrightcoveExperience\" seamlesstabbing=\"undefined\">\r\n                <param name=\"allowScriptAccess\" value=\"always\">\r\n                <param name=\"allowFullScreen\" value=\"true\">\r\n                <param name=\"seamlessTabbing\" value=\"false\">\r\n                <param name=\"swliveconnect\" value=\"true\">\r\n                <param name=\"wmode\" value=\"window\">\r\n                <param name=\"quality\" value=\"high\">\r\n                <param name=\"bgcolor\" value=\"#FFFFFF\">\r\n            </object>\r\n            <!-- End of Brightcove Player -->\r\n        </div>\r\n        <a class=\"hpe_overlay_cls\" href=\"javascript:void(0);\" shape=\"rect\" style=\"text-decoration: none;\">&nbsp;</a></div>\r\n    <div class=\"hpe_overlay video_bc\" id=\"overlay_mp9_video\">\r\n        <div class=\"video_wrapper\">\r\n            <!-- Begin of Brightcove Player -->\r\n            <object type=\"application/x-shockwave-flash\" data=\"http://c.brightcove.com/services/viewer/federated_f9?&amp;width=640&amp;height=360&amp;flashID=myExperience2516054781001&amp;htmlFallback=true&amp;bgcolor=%23FFFFFF&amp;playerID=1377059119001&amp;playerKey=AQ~~%2CAAABAeI3VIE~%2CN0OfmZCPaxh-U75tF8pHH0iLtpzUxRz-&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;%40videoPlayer=2516054781001&amp;autoStart=&amp;debuggerID=&amp;startTime=1442027587912\" id=\"myExperience2516054781001\" width=\"640\" height=\"360\" class=\"BrightcoveExperience\" seamlesstabbing=\"undefined\">\r\n                <param name=\"allowScriptAccess\" value=\"always\">\r\n                <param name=\"allowFullScreen\" value=\"true\">\r\n                <param name=\"seamlessTabbing\" value=\"false\">\r\n                <param name=\"swliveconnect\" value=\"true\">\r\n                <param name=\"wmode\" value=\"window\">\r\n                <param name=\"quality\" value=\"high\">\r\n                <param name=\"bgcolor\" value=\"#FFFFFF\">\r\n            </object>\r\n            <!-- End of Brightcove Player -->\r\n        </div>\r\n        <a class=\"hpe_overlay_cls\" href=\"javascript:void(0);\" shape=\"rect\" style=\"text-decoration: none;\">&nbsp;</a></div>\r\n    <script type=\"text/javascript\" space=\"preserve\">                        brightcove.createExperiences();</script>\r\n    <div class=\"pop_drk\"></div>\r\n    <!-- END VIDEOS -->\r\n    <!-- start content integration -->\r\n    <div class=\"breakout_recenter clearfix\">\r\n        <div class=\"hp_recommends\"><strong xmlns=\"\">HP recommends Windows.</strong></div>\r\n        <div class=\"clearall\"></div>\r\n    </div>\r\n    <div class=\"split_container\">\r\n        <h2><span class=\"f31 str\">Capture customer attention and create an enhanced in-store experience</span></h2>\r\n        <p><span class=\"final\">Go big or go home. You’ve got to be bold and memorable for your brand to stand out from the crowd. Stunning HP Digital Signage and interactive solutions enable you to engage customers, personalize the experience and increase loyalty.</span></p>\r\n    </div>\r\n    <div class=\"split_container interactive_signage_display hairline_bottom\">\r\n        <div class=\"split_50 interactive_signage_display_content clearfix\">\r\n            <div class=\"left\">\r\n                <h2 class=\"m30\">Performance Digital Signage Displays</h2>\r\n                <p>See the difference on a dynamic, touch or non-touch 42 or 47-inch diagonal digital signage display. These displays include factory-integrated multi-touch, touch screens with advanced IR technology for accurate touch recognition and support of numerous gestures with no “ghosting”. They are plug and play and Windows® HID compliant for quick and easy installation.</p>\r\n                <p><span class=\"str\">Features</span></p>\r\n                <ul class=\"bulleted_list_outside\">\r\n                    <li xmlns=\"\">Video-over-Ethernet input </li>\r\n                    <li>Embedded USB Media Sign Player</li>\r\n                    <li>Designed for 24/7 play</li>\r\n                    <li>Local or remote management</li>\r\n                </ul>\r\n                <div class=\"button_set\"><a class=\"button inline primary\" href=\"\" rel=\"Learn more\" shape=\"rect\"><span class=\"btn_label\">Learn more</span></a></div>\r\n            </div>\r\n            <div class=\"right\">\r\n                <div class=\"product_image\">\r\n                    <img xmlns=\"\" alt=\"Performance Digital Signage Displays\" src=\"/Content/Image/performance-hero_v3_tcm_245_1607399.jpg\"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
-             var domainInfors = new List<DomainInfor>
+            //var contentDetails =
+            //    "<div id=\"rs_digital_storage\">\r\n    <script language=\"JavaScript\" src=\"/Scripts/BrightcoveExperiences.js\" type=\"text/javascript\" space=\"preserve\"> </script>\r\n    <div class=\"hpe_overlay video_bc\" id=\"overlay_mp4_video\">\r\n        <div class=\"video_wrapper\">\r\n            <!-- Begin of Brightcove Player -->\r\n            <object type=\"application/x-shockwave-flash\" data=\"http://c.brightcove.com/services/viewer/federated_f9?&amp;width=640&amp;height=360&amp;flashID=myExperience2516054781001&amp;htmlFallback=true&amp;bgcolor=%23FFFFFF&amp;playerID=1377059119001&amp;playerKey=AQ~~%2CAAABAeI3VIE~%2CN0OfmZCPaxh-U75tF8pHH0iLtpzUxRz-&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;%40videoPlayer=2516054781001&amp;autoStart=&amp;debuggerID=&amp;startTime=1442027587911\" id=\"myExperience2516054781001\" width=\"640\" height=\"360\" class=\"BrightcoveExperience\" seamlesstabbing=\"undefined\">\r\n                <param name=\"allowScriptAccess\" value=\"always\">\r\n                <param name=\"allowFullScreen\" value=\"true\">\r\n                <param name=\"seamlessTabbing\" value=\"false\">\r\n                <param name=\"swliveconnect\" value=\"true\">\r\n                <param name=\"wmode\" value=\"window\">\r\n                <param name=\"quality\" value=\"high\">\r\n                <param name=\"bgcolor\" value=\"#FFFFFF\">\r\n            </object>\r\n            <!-- End of Brightcove Player -->\r\n        </div>\r\n        <a class=\"hpe_overlay_cls\" href=\"javascript:void(0);\" shape=\"rect\" style=\"text-decoration: none;\">&nbsp;</a></div>\r\n    <div class=\"hpe_overlay video_bc\" id=\"overlay_mp9_video\">\r\n        <div class=\"video_wrapper\">\r\n            <!-- Begin of Brightcove Player -->\r\n            <object type=\"application/x-shockwave-flash\" data=\"http://c.brightcove.com/services/viewer/federated_f9?&amp;width=640&amp;height=360&amp;flashID=myExperience2516054781001&amp;htmlFallback=true&amp;bgcolor=%23FFFFFF&amp;playerID=1377059119001&amp;playerKey=AQ~~%2CAAABAeI3VIE~%2CN0OfmZCPaxh-U75tF8pHH0iLtpzUxRz-&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;%40videoPlayer=2516054781001&amp;autoStart=&amp;debuggerID=&amp;startTime=1442027587912\" id=\"myExperience2516054781001\" width=\"640\" height=\"360\" class=\"BrightcoveExperience\" seamlesstabbing=\"undefined\">\r\n                <param name=\"allowScriptAccess\" value=\"always\">\r\n                <param name=\"allowFullScreen\" value=\"true\">\r\n                <param name=\"seamlessTabbing\" value=\"false\">\r\n                <param name=\"swliveconnect\" value=\"true\">\r\n                <param name=\"wmode\" value=\"window\">\r\n                <param name=\"quality\" value=\"high\">\r\n                <param name=\"bgcolor\" value=\"#FFFFFF\">\r\n            </object>\r\n            <!-- End of Brightcove Player -->\r\n        </div>\r\n        <a class=\"hpe_overlay_cls\" href=\"javascript:void(0);\" shape=\"rect\" style=\"text-decoration: none;\">&nbsp;</a></div>\r\n    <script type=\"text/javascript\" space=\"preserve\">                        brightcove.createExperiences();</script>\r\n    <div class=\"pop_drk\"></div>\r\n    <!-- END VIDEOS -->\r\n    <!-- start content integration -->\r\n    <div class=\"breakout_recenter clearfix\">\r\n        <div class=\"hp_recommends\"><strong xmlns=\"\">HP recommends Windows.</strong></div>\r\n        <div class=\"clearall\"></div>\r\n    </div>\r\n    <div class=\"split_container\">\r\n        <h2><span class=\"f31 str\">Capture customer attention and create an enhanced in-store experience</span></h2>\r\n        <p><span class=\"final\">Go big or go home. You’ve got to be bold and memorable for your brand to stand out from the crowd. Stunning HP Digital Signage and interactive solutions enable you to engage customers, personalize the experience and increase loyalty.</span></p>\r\n    </div>\r\n    <div class=\"split_container interactive_signage_display hairline_bottom\">\r\n        <div class=\"split_50 interactive_signage_display_content clearfix\">\r\n            <div class=\"left\">\r\n                <h2 class=\"m30\">Performance Digital Signage Displays</h2>\r\n                <p>See the difference on a dynamic, touch or non-touch 42 or 47-inch diagonal digital signage display. These displays include factory-integrated multi-touch, touch screens with advanced IR technology for accurate touch recognition and support of numerous gestures with no “ghosting”. They are plug and play and Windows® HID compliant for quick and easy installation.</p>\r\n                <p><span class=\"str\">Features</span></p>\r\n                <ul class=\"bulleted_list_outside\">\r\n                    <li xmlns=\"\">Video-over-Ethernet input </li>\r\n                    <li>Embedded USB Media Sign Player</li>\r\n                    <li>Designed for 24/7 play</li>\r\n                    <li>Local or remote management</li>\r\n                </ul>\r\n                <div class=\"button_set\"><a class=\"button inline primary\" href=\"\" rel=\"Learn more\" shape=\"rect\"><span class=\"btn_label\">Learn more</span></a></div>\r\n            </div>\r\n            <div class=\"right\">\r\n                <div class=\"product_image\">\r\n                    <img xmlns=\"\" alt=\"Performance Digital Signage Displays\" src=\"/Content/Image/performance-hero_v3_tcm_245_1607399.jpg\"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+
+
+            var domainInfors = new List<DomainInfor>
             {
                     new DomainInfor()
                     {
                         Id = 1,
                         DomainId = 1,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     },
                     new DomainInfor()
                     {
                         Id = 2,
                         DomainId = 2,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     },
                     new DomainInfor()
                     {
                         Id = 3,
                         DomainId = 3,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     },
                     new DomainInfor()
                     {
                         Id = 4,
                         DomainId = 4,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     },
                     new DomainInfor()
                     {
                         Id = 5,
                         DomainId = 5,
                         TabNameId = 1,
-                        Content =contentDetails
+                        Content =""
                     },
                     new DomainInfor()
                     {
                         Id = 6,
                         DomainId = 6,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     },
                     new DomainInfor()
                     {
                         Id = 7,
                         DomainId = 7,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     },
                     new DomainInfor()
                     {
                         Id = 8,
                         DomainId = 1,
                         TabNameId = 1,
-                        Content = contentDetails
+                        Content = ""
                     }
             };
 
-             context.DomainInfors.AddOrUpdate(domainInfors.ToArray());
-             context.SaveChanges();
-         }
+            context.DomainInfors.AddOrUpdate(domainInfors.ToArray());
+            context.SaveChanges();
+        }
     }
 }
