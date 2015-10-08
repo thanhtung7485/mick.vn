@@ -14,5 +14,6 @@ namespace EagleDigital.Service.IServices
         DomainInfor Details(int id);
         DomainInfor Insert(DomainInfor domainInfor);
         DomainInfor Update(DomainInfor domainInfor);
+        DomainInfor Delete(int id);
     }
 }

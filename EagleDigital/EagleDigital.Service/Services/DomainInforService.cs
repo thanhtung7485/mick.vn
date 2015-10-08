@@ -54,5 +54,13 @@ namespace EagleDigital.Service.Services
             _domainInforRepository.CommitChanges();
             return domainDetails;
         }
+
+        public DomainInfor Delete(int id)
+        {
+            var domainDetails = _domainInforRepository.Get(id);
+            _domainInforRepository.DeleteOnCommit(domainDetails);
+            _domainInforRepository.CommitChanges();
+            return domainDetails;
+        }
     }
 }
