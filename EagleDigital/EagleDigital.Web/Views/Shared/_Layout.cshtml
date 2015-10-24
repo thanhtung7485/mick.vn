@@ -346,7 +346,18 @@
                         <form xmlns="" action="" enctype="application/x-www-form-urlencoded" id="searchHP" method="get" name="searchHP">
                             <input name="client" type="hidden" value=""><input disabled="disabled" name="jumpID" type="hidden" value=""><div xmlns="http://www.w3.org/1999/xhtml" class="search_container search_container_inactive">
                                 <div class="search_mob_container hf_clf">
-                                    <input xmlns="" autocomplete="off" class="searchBox ac_input" id="searchBox" maxlength="100" name="qt" size="23" tabindex="3" title="Search Mick.vn" type="text" value="Search Mick.vn"><a class="searchClear" href="javascript:void(0);" shape="rect" tabindex="3" title="Clear"><span class="screenReading hf_rlv">Clear</span></a><input xmlns="" class="searchSubmit" name="search" tabindex="3" title="Begin your search" type="submit" value="">
+                                    <input xmlns="" autocomplete="off" class="searchBox ac_input" id="searchBox" maxlength="100" name="qt" size="23" tabindex="3" title="Search Mick.vn" type="text" value="" placeholder="Search Mick.vn">
+                                    <a class="searchClear" href="javascript:void(0);" shape="rect" tabindex="3" title="Clear"><span class="screenReading hf_rlv">Clear</span></a>
+                                    <style>
+                                        .buttonSeach
+                                                    {
+                                                    background: url(/Content/Image/imagesSeach.png) no-repeat;
+                                                   cursor:pointer;
+                                                                border: none;
+                                                    }
+                                    </style>
+                                    
+                                    <input xmlns="" class="searchSubmit buttonSeach" name="search" tabindex="3" title="Begin your search" type="submit" value="" >
                                 </div>
                             </div>
                             <span xmlns="http://www.w3.org/1999/xhtml" class="defaultTxt hidden">Search HP.com</span><span xmlns="http://www.w3.org/1999/xhtml" class="js_metricId hidden">1676317</span><input name="charset" type="hidden" value="utf-8">

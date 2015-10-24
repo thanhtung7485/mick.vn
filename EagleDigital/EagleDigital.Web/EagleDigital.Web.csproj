@@ -157,6 +157,7 @@
     <Content Include="Areas\Admin\Angular\Service\createDomainInforService.js" />
     <Content Include="Areas\Admin\Angular\Service\domainInforService.js" />
     <Content Include="Areas\Admin\Angular\Service\updateDomainInforService.js" />
+    <Content Include="Content\Image\imagesSeach.png" />
     <Content Include="Scripts\plugin\AngularJs\angular.min.js" />
     <Content Include="Scripts\plugin\bootstrap3-editable\css\bootstrap-editable.css" />
     <Content Include="Scripts\plugin\bootstrap3-editable\css\bootstrap-editable.custom.css" />
