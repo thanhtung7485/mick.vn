@@ -6,7 +6,9 @@
 
 @foreach(var item in Model.ListDomainInfors){
     <text>
-      @Html.Raw(item.Content)
+        <div id="rs_digital_storage">
+            @Html.Raw(item.Content)
+        </div>
     </text>
 }
 
