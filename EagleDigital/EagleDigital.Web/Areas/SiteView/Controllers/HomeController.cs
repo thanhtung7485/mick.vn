@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using EagleDigital.Service.IServices;
-using EagleDigital.Service.Services;
+using EagleDigital.Service.TenantDevelopment.IServices;
 using EagleDigital.Web.Areas.SiteView.Models;
 
 namespace EagleDigital.Web.Areas.SiteView.Controllers

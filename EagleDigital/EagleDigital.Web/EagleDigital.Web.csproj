@@ -139,6 +139,9 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DomainInforController.cs" />
     <Compile Include="Areas\Admin\Models\DomainInforModel.cs" />
+    <Compile Include="Areas\Music\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Music\Models\AllinOneModelView.cs" />
+    <Compile Include="Areas\Music\MusicAreaRegistration.cs" />
     <Compile Include="Areas\SiteView\Controllers\HomeController.cs" />
     <Compile Include="Areas\SiteView\Models\DomainInforModel.cs" />
     <Compile Include="Areas\SiteView\Models\HomeModelView.cs" />
@@ -1089,6 +1092,8 @@
     <Content Include="Scripts\plugin\treeview\prints\print-preview.css" />
     <Content Include="Scripts\plugin\treeview\prints\print.css" />
     <Content Include="Areas\Admin\Views\DomainInfor\Update.cshtml" />
+    <Content Include="Areas\Music\Views\Web.config" />
+    <Content Include="Areas\Music\Views\Home\Index.cshtml" />
     <None Include="Scripts\plugin\validation\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\plugin\validation\jquery.validate.js" />
     <Content Include="Scripts\plugin\validation\jquery.validate.kendo.js" />
@@ -2146,6 +2151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Music\Views\Shared\" />
     <Folder Include="Areas\SiteView\Views\Shared\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\plugin\dialog\" />

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using EagleDigital.CodeFirst.Models;
-using EagleDigital.Service.IServices;
-using EagleDigital.Service.Services;
+using EagleDigital.CodeFirst.TenantDevelopment.Models;
+using EagleDigital.Service.TenantDevelopment.IServices;
 using EagleDigital.Web.Areas.Admin.Models;
 
 namespace EagleDigital.Web.Areas.Admin.Controllers

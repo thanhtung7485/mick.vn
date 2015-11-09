@@ -51,25 +51,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataCommon\InsertDataCommon.cs" />
-    <Compile Include="IEntitiesContext.cs" />
-    <Compile Include="MickContext.cs" />
-    <Compile Include="Migrations\201510011709180_f.cs" />
-    <Compile Include="Migrations\201510011709180_f.Designer.cs">
-      <DependentUpon>201510011709180_f.cs</DependentUpon>
+    <Compile Include="TenantDevelopment\IEntitiesContext.cs" />
+    <Compile Include="TenantDevelopment\MickContext.cs" />
+    <Compile Include="TenantDevelopment\Migrations\201511091346352_Initial.cs" />
+    <Compile Include="TenantDevelopment\Migrations\201511091346352_Initial.Designer.cs">
+      <DependentUpon>201511091346352_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AboutUs.cs" />
-    <Compile Include="Models\BusinessBase.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\ContactUs.cs" />
-    <Compile Include="Models\Domain.cs" />
-    <Compile Include="Models\DomainInfor.cs" />
-    <Compile Include="Models\RequestProject.cs" />
-    <Compile Include="Models\SubCategory.cs" />
-    <Compile Include="Models\TabName.cs" />
+    <Compile Include="TenantDevelopment\Migrations\201511091349377_Initial1.cs" />
+    <Compile Include="TenantDevelopment\Migrations\201511091349377_Initial1.Designer.cs">
+      <DependentUpon>201511091349377_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantDevelopment\Migrations\Configuration.cs" />
+    <Compile Include="TenantDevelopment\Models\AboutUs.cs" />
+    <Compile Include="TenantDevelopment\Models\BusinessBase.cs" />
+    <Compile Include="TenantDevelopment\Models\Category.cs" />
+    <Compile Include="TenantDevelopment\Models\ContactUs.cs" />
+    <Compile Include="TenantDevelopment\Models\Domain.cs" />
+    <Compile Include="TenantDevelopment\Models\DomainInfor.cs" />
+    <Compile Include="TenantDevelopment\Models\RequestProject.cs" />
+    <Compile Include="TenantDevelopment\Models\SubCategory.cs" />
+    <Compile Include="TenantDevelopment\Models\TabName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\EntityRepository.cs" />
-    <Compile Include="Repositories\IEntityRepository.cs" />
+    <Compile Include="TenantDevelopment\Repositories\EntityRepository.cs" />
+    <Compile Include="TenantDevelopment\Repositories\IEntityRepository.cs" />
+    <Compile Include="TenantMusic\IMusicContext.cs" />
+    <Compile Include="TenantMusic\Migrations\201511091426005_Initial.cs" />
+    <Compile Include="TenantMusic\Migrations\201511091426005_Initial.Designer.cs">
+      <DependentUpon>201511091426005_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantMusic\Migrations\201511091457314_Initial1.cs" />
+    <Compile Include="TenantMusic\Migrations\201511091457314_Initial1.Designer.cs">
+      <DependentUpon>201511091457314_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantMusic\Migrations\Configuration.cs" />
+    <Compile Include="TenantMusic\Models\Author.cs" />
+    <Compile Include="TenantMusic\Models\Genre.cs" />
+    <Compile Include="TenantMusic\Models\Song.cs" />
+    <Compile Include="TenantMusic\MusicContext.cs" />
+    <Compile Include="TenantMusic\Repositories\EntityRepository.cs" />
+    <Compile Include="TenantMusic\Repositories\IEntityRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -85,8 +105,17 @@
     <Content Include="Infrastructure\ProjectInfor.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510011709180_f.resx">
-      <DependentUpon>201510011709180_f.cs</DependentUpon>
+    <EmbeddedResource Include="TenantDevelopment\Migrations\201511091346352_Initial.resx">
+      <DependentUpon>201511091346352_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantDevelopment\Migrations\201511091349377_Initial1.resx">
+      <DependentUpon>201511091349377_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantMusic\Migrations\201511091426005_Initial.resx">
+      <DependentUpon>201511091426005_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantMusic\Migrations\201511091457314_Initial1.resx">
+      <DependentUpon>201511091457314_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

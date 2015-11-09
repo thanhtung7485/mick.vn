@@ -1,8 +1,5 @@
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\CoreLib.dll
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\CoreLib.pdb
-D:\mick.vn\EagleDigital\CoreLib\obj\Debug\CoreLib.csprojResolveAssemblyReference.cache
-D:\mick.vn\EagleDigital\CoreLib\obj\Debug\CoreLib.dll
-D:\mick.vn\EagleDigital\CoreLib\obj\Debug\CoreLib.pdb
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\System.Web.Helpers.dll
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\System.Web.Mvc.dll
@@ -16,3 +13,6 @@ D:\mick.vn\EagleDigital\CoreLib\bin\Debug\System.Web.Razor.xml
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\System.Web.WebPages.xml
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\mick.vn\EagleDigital\CoreLib\bin\Debug\System.Web.WebPages.Razor.xml
+D:\mick.vn\EagleDigital\CoreLib\obj\Debug\CoreLib.dll
+D:\mick.vn\EagleDigital\CoreLib\obj\Debug\CoreLib.pdb
+D:\mick.vn\EagleDigital\CoreLib\obj\Debug\CoreLib.csprojResolveAssemblyReference.cache

@@ -13,10 +13,11 @@ using Autofac.Integration.Mvc;
 //using EagleDigital.DbFirst.Model;
 //using EagleDigital.DbFirst.Repositories;
 using EagleDigital.CodeFirst;
-using EagleDigital.CodeFirst.Models;
-using EagleDigital.CodeFirst.Repositories;
-using EagleDigital.Service.IServices;
-using EagleDigital.Service.Services;
+using EagleDigital.CodeFirst.TenantDevelopment;
+using EagleDigital.CodeFirst.TenantDevelopment.Models;
+using EagleDigital.CodeFirst.TenantDevelopment.Repositories;
+using EagleDigital.Service.TenantDevelopment.IServices;
+using EagleDigital.Service.TenantDevelopment.Services;
 
 namespace EagleDigital.Web
 {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using EagleDigital.CodeFirst.Models;
+using EagleDigital.CodeFirst.TenantDevelopment.Models;
 
 namespace EagleDigital.Web.Areas.SiteView.Models
 {

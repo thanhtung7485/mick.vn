@@ -5,7 +5,8 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EagleDigital.CodeFirst.Models;
+using EagleDigital.CodeFirst.TenantDevelopment;
+using EagleDigital.CodeFirst.TenantDevelopment.Models;
 
 namespace EagleDigital.CodeFirst.DataCommon
 {
