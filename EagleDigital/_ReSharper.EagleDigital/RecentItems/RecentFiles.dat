@@ -1,6 +1,5 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:SiteView/d:Views/d:Home/f:DomainDetail.cshtml" caret="0" fromTop="0" />
     <File id="EB3BC816-EED2-4834-9CA9-3A0E691F042D/d:Model/f:MickDb.Context.tt" caret="0" fromTop="0" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/f:Web.config" caret="1304" fromTop="14" />
     <File id="EB3BC816-EED2-4834-9CA9-3A0E691F042D/f:MickDatabaseEntities.cs" caret="0" fromTop="0" />
@@ -30,6 +29,7 @@
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Admin/d:Angular/d:Controller/f:updateDomainInforController.js" caret="1330" fromTop="20" />
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Repositories/f:EntityRepository.cs" caret="635" fromTop="1" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Controllers/f:HomeController.cs" caret="2866" fromTop="16" />
+    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Migrations/f:Configuration.cs" caret="11988" fromTop="14" />
   </RecentFiles>
   <RecentEdits>
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:SiteView/d:Models/f:DomainInforModel.cs" caret="294" fromTop="11" />
