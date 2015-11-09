@@ -32,3 +32,5 @@ D:\mick.vn\EagleDigital\EagleDigital.Web\bin\System.Web.WebPages.Razor.xml
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Debug\EagleDigital.Web.csprojResolveAssemblyReference.cache
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Debug\EagleDigital.Web.dll
 D:\mick.vn\EagleDigital\EagleDigital.Web\obj\Debug\EagleDigital.Web.pdb
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\AWSSDK.dll
+D:\mick.vn\EagleDigital\EagleDigital.Web\bin\AWSSDK.pdb

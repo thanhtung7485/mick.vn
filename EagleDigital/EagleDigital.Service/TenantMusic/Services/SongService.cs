@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using EagleDigital.CodeFirst.TenantDevelopment.Repositories;
 using EagleDigital.CodeFirst.TenantMusic.Models;
 using EagleDigital.Service.TenantMusic.IServices;
 using EagleDigital.CodeFirst.TenantMusic.Repositories;
@@ -15,8 +15,8 @@ namespace EagleDigital.Service.TenantMusic.Services
     public class SongService : ISongService
     {
 
-       private readonly IEntityRepository<Song> _songRepository;
-       public SongService(IEntityRepository<Song> songRepository)
+        private readonly IMusicRepository<Song> _songRepository;
+        public SongService(IMusicRepository<Song> songRepository)
         {
             this._songRepository = songRepository;
         }

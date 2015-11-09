@@ -1,0 +1,213 @@
+﻿@model EagleDigital.Web.Areas.Music.Models.SongModelView
+
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Areas/Music/Scripts/upload.js"></script>
+<script src="~/Areas/Music/Scripts/s3UploadController.js"></script>
+<script src="~/Areas/Music/Scripts/commonController.js"></script>
+<link href="~/Areas/Music/Scripts/responsive.css" rel="stylesheet" />
+
+<script type="text/template" id="qq-template">
+        <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
+            <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                <span class="qq-upload-drop-area-text-selector"></span>
+            </div>
+            <div class="qq-upload-button-selector qq-upload-button">
+                <div>Upload a file</div>
+            </div>
+            <span class="qq-drop-processing-selector qq-drop-processing">
+                <span>Processing dropped files...</span>
+                <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+            </span>
+            <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
+                <li>
+                    <div class="qq-progress-bar-container-selector">
+                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                    </div>
+                    <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                    <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
+                    <div class="name-file-upload"><span title="name" class="qq-upload-file-selector qq-upload-file"></span></div>
+                    <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+                    <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                    <span class="qq-upload-size-selector qq-upload-size"></span>
+                    <div class="clear"></div>
+                    <button class="qq-btn btn btn-default qq-upload-retry-selector qq-upload-retry">Retry</button>
+                    <button class="qq-btn btn btn-default qq-upload-cancel-selector qq-upload-cancel">Cancel</button>
+                    <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                </li>
+            </ul>
+        </div>
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            s3UploadController.init();
+        });
+    </script>
+
+
+
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { @class = "form-horizontal form-upload", role = "form", id = "frmUploadImage" }))
+{
+    //@Html.AntiForgeryToken()
+    <h4>Upload Content</h4>
+    <div class="form-475 form-upload clearfix">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="pull-left">
+                    <div class="">
+                        <label class="dj-form-file btn btn-dj-primary" for="file">
+                            <span>choose file</span>
+                            <input type="file" class="form-control" id="file" placeholder="">
+                        </label>
+                    </div>
+                </div>
+                <div class="pull-left">
+                    <ul>
+                        <li>Max size 10 GB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9" style="max-width: 70%">
+                    <div class="row">
+                        <video id="my_video" width="550" height="310" autoplay style="display: none">
+                            <source src="" id="video-source">
+                        </video>
+                        <div id="upload-cancel" style="display: none">
+                            <a id="btn-upload" title="Upload file" href="#" onclick="s3UploadController.uploadS3({S3AmazonUrl:'@Model.S3Config.S3AmazonUrl',user:'user', pass:'pass'})" class="mini-btn btn btn-dj-primary">Upload</a>
+                            <a title="Cancel Upload" href="#" id="btn-cancel-upload" onclick="s3UploadController.uploadCancel()" class="mini-btn btn btn-dj-primary">Cancel</a>
+                        </div>
+                        <div id="pause-resume-cancel" style="display: none">
+                            <a title="Pause Upload" href="#" id="btn-pause" onclick=" s3UploadController.pause() " class="mini-btn btn btn-dj-primary">Pause</a>
+                            <a title="Resume Upload" href="#" id="btn-resume" onclick=" s3UploadController.resume() " style="display: none" class="mini-btn btn btn-dj-primary">Resume</a>
+                            <a title="Cancel Upload" href="#" id="btn-cancel" onclick=" s3UploadController.cancel() " class="mini-btn btn btn-dj-primary">Cancel</a>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="percen-process">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="div-file-name" class="text-over-ellipsis" style="color: #9a9aa4; display: none;">File : <span id="file-name"></span></div>
+                        @Html.TextBoxFor(m => m.Link, new { @class = "customer_custom1", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(m => m.Link, String.Empty, new { @class = "field-validation-error" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12 col-md-9">
+            @Html.HiddenFor(m => m.Id, new { @class = "form-control dj-form-input" })
+        </div>
+    </div>
+    <div class="form-475">
+        <div class="form-group long-text">
+            <label class="col-sm-12 col-md-3 control-label dj-form-label" for="">Title<span class="required">*</span></label>
+            <div class="col-sm-12 col-md-9">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control dj-form-input", @autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.Name, String.Empty, new { @class = "field-validation-error" })
+            </div>
+        </div>
+
+        <div class="form-group margin-top-bottom-20">
+            <div class="col-sm-12">
+                <input type="button" id="btn-submit" value="Save" class="btn btn-dj-primary text-uppercase" />
+            </div>
+        </div>
+    </div>
+}
+
+@*@section right_col{
+    <div id="sidebar-right-upload"></div>
+    <div id="sidebar-right-activity"></div>
+    <div id="sidebar-right-mydj"></div>
+}*@
+
+<script type="text/javascript">
+    var isSubmit = false;
+    $(document).ready(function () {
+        
+        $("#btn-submit").on("click", function () {
+            if (isSubmit) {
+                return;
+            }
+            isSubmit = true;
+            var data = {
+                URL: $('#URL').val(),
+                Title: $('#Title').val(),
+                Tags: $('#Tags').val(),
+
+                GenreID: $('#GenreID').val(),
+                Description: $('#Description').val(),
+                TrackList: $('#TrackList').val(),
+
+                Image: $('#Image').val(),
+                Premium: $('#Premium').prop("checked"),
+                PublishTypeID: $('.mix-public').prop("checked") == true ? 2 : 1,
+
+                Duration: $('#Duration').val(),
+                MediaTypeID: $('#MediaTypeID').val(),
+                ImageSlideShow: $("#ListToStringImageSlideShow").val()
+            };
+            $("span[data-valmsg-for]").text("");
+
+            $.ajax({
+                url: "/Mix/MixUpload",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify(data),
+                success: function (response) {
+                    if (response.Success) {
+                        $("#btn-submit").prop('disabled', true);
+                        window.location.href = "/Mix/Success?msg=" + response.Message;
+
+                    } else {
+                        commonController.ui.createForm = "#form-signup";
+                        commonController.validation.all(response.Errors);
+                        isSubmit = false;
+                    }
+
+                },
+                error: function (resp) {
+                    isSubmit = false;
+                }
+            });
+        });
+
+        window.onload = function () { s3UploadController.uploadCancel() };
+
+        $(window).bind('beforeunload', function () {
+            var status = $('#accountstatus').attr('accountstatus');
+            if (status == 1) {
+                if (!isSubmit) {
+                    if ($('span#file-name').is(":visible") === true || $("input#Title").val().length > 0
+                        || $("input#Tags").val().length > 0 || $("select#GenreID").val().length > 0
+                        || $("textarea#Description").val().length > 0 || $("input#Image").val().length > 0
+                        || parseInt($("input#Price").val()) > 0 || $("textarea#TrackList").val().length > 0) {
+                        isSubmit = false;
+                        return 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.';
+                    }
+                }
+                isSubmit = false;
+            }
+            return 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.';
+        });
+    });
+
+
+    function getExtension(filename) {
+        var parts = filename.split('.');
+        return parts[parts.length - 1];
+    }
+
+    function isMp3(filename) {
+        var ext = getExtension(filename);
+        switch (ext.toLowerCase()) {
+            case 'mp3':
+                return true;
+        }
+        return false;
+    }
+
+</script>
+

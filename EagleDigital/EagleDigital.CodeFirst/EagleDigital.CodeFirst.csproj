@@ -88,8 +88,8 @@
     <Compile Include="TenantMusic\Models\Genre.cs" />
     <Compile Include="TenantMusic\Models\Song.cs" />
     <Compile Include="TenantMusic\MusicContext.cs" />
-    <Compile Include="TenantMusic\Repositories\EntityRepository.cs" />
-    <Compile Include="TenantMusic\Repositories\IEntityRepository.cs" />
+    <Compile Include="TenantMusic\Repositories\MusicRepository.cs" />
+    <Compile Include="TenantMusic\Repositories\IMusicRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

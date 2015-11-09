@@ -4,4 +4,16 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+
+
+
+<div id="divUploadMusic"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#divUploadMusic").load('@Url.Action("Upload","Home")');
+    });
+</script>

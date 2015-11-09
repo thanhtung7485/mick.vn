@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EagleDigital.CodeFirst.TenantDevelopment.Repositories;
 using EagleDigital.CodeFirst.TenantMusic.Models;
 using EagleDigital.Service.TenantMusic.IServices;
 using EagleDigital.CodeFirst.TenantMusic.Repositories;
@@ -11,8 +12,8 @@ namespace EagleDigital.Service.TenantMusic.Services
 {
     public class GenreService : IGenreService
     {
-       private readonly IEntityRepository<Genre> _genreRepository;
-       public GenreService(IEntityRepository<Genre> genreRepository)
+        private readonly IMusicRepository<Genre> _genreRepository;
+        public GenreService(IMusicRepository<Genre> genreRepository)
         {
             this._genreRepository = genreRepository;
         }

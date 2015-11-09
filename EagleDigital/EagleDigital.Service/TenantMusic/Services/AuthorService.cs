@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using EagleDigital.CodeFirst.TenantMusic.Models;
 using EagleDigital.Service.TenantMusic.IServices;
 using EagleDigital.CodeFirst.TenantMusic.Repositories;
@@ -12,8 +13,8 @@ namespace EagleDigital.Service.TenantMusic.Services
     public class AuthorService : IAuthorService
     {
 
-        private readonly IEntityRepository<Author> _authorRepository;
-        public AuthorService(IEntityRepository<Author> authorRepository)
+        private readonly IMusicRepository<Author> _authorRepository;
+        public AuthorService(IMusicRepository<Author> authorRepository)
         {
             this._authorRepository = authorRepository;
         }

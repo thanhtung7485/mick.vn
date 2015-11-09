@@ -16,8 +16,13 @@ using EagleDigital.CodeFirst;
 using EagleDigital.CodeFirst.TenantDevelopment;
 using EagleDigital.CodeFirst.TenantDevelopment.Models;
 using EagleDigital.CodeFirst.TenantDevelopment.Repositories;
+using EagleDigital.CodeFirst.TenantMusic;
+using EagleDigital.CodeFirst.TenantMusic.Models;
+using EagleDigital.CodeFirst.TenantMusic.Repositories;
 using EagleDigital.Service.TenantDevelopment.IServices;
 using EagleDigital.Service.TenantDevelopment.Services;
+using EagleDigital.Service.TenantMusic.IServices;
+using EagleDigital.Service.TenantMusic.Services;
 
 namespace EagleDigital.Web
 {
@@ -59,6 +64,18 @@ namespace EagleDigital.Web
 
             //builder.Register(c => new MickDatabaseEntities()).As<IEntitiesContext>();
             builder.Register(c => new MickContext()).As<IEntitiesContext>();
+
+            builder.RegisterType<MusicRepository<Song>>().As<IMusicRepository<Song>>();
+            builder.RegisterType<SongService>().As<ISongService>();
+
+            builder.RegisterType<MusicRepository<Genre>>().As<IMusicRepository<Genre>>();
+            builder.RegisterType<GenreService>().As<IGenreService>();
+
+            builder.RegisterType<MusicRepository<Author>>().As<IMusicRepository<Author>>();
+            builder.RegisterType<AuthorService>().As<IAuthorService>();
+
+            builder.Register(c => new MusicContext()).As<IMusicContext>();
+
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
