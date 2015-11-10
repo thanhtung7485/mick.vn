@@ -146,7 +146,9 @@
     <Compile Include="Areas\Music\Controllers\HomeController.cs" />
     <Compile Include="Areas\Music\Controllers\S3UploadController.cs" />
     <Compile Include="Areas\Music\Models\AllinOneModelView.cs" />
+    <Compile Include="Areas\Music\Models\AuthorModelView.cs" />
     <Compile Include="Areas\Music\Models\Common.cs" />
+    <Compile Include="Areas\Music\Models\GenreModelView.cs" />
     <Compile Include="Areas\Music\Models\SongModelView.cs" />
     <Compile Include="Areas\Music\MusicAreaRegistration.cs" />
     <Compile Include="Areas\SiteView\Controllers\HomeController.cs" />
@@ -1108,6 +1110,8 @@
     <Content Include="Areas\Music\Views\Home\_PartialUploadMusic.cshtml" />
     <Content Include="Areas\Music\Views\Home\_PartialListMusic.cshtml" />
     <Content Include="Areas\Music\Views\Home\_PartialPlay.cshtml" />
+    <Content Include="Areas\Music\Views\Home\_PartialListAuthor.cshtml" />
+    <Content Include="Areas\Music\Views\Home\_PartialListGenre.cshtml" />
     <None Include="Scripts\plugin\validation\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\plugin\validation\jquery.validate.js" />
     <Content Include="Scripts\plugin\validation\jquery.validate.kendo.js" />

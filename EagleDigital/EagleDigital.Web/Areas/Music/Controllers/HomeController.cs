@@ -75,13 +75,61 @@ namespace EagleDigital.Web.Areas.Music.Controllers
             return PartialView("_PartialUploadMusic", model);
         }
 
-       
-
         [HttpPost]
-        public ActionResult Upload(SongModelView model)
+        public JsonResult Upload(SongModelView model)
         {
-            return PartialView("_PartialUploadMusic", model);
+            var result =  _songService.Insert(model);
+            return Json(new {Status = "OK", Id = result.Id}, JsonRequestBehavior.AllowGet);
+            // return PartialView("_PartialUploadMusic", model);
         }
+
+        public ActionResult ListSong()
+        {
+            var listSong = _songService.List();
+            var model = listSong.Select(song => new SongModelView()
+                                                    {
+                                                        Id = song.Id, Name = song.Name, Link = song.Link, GenreId = song.GenreId, AuthorId = song.AuthorId
+                                                    }).ToList();
+            return PartialView("_PartialListMusic", model);
+        }
+
+
+        public ActionResult Play(int? id)
+        {
+            var song = _songService.Details(1);
+            var model = new SongModelView()
+                            {
+                                Id = song.Id,
+                                Name = song.Name,
+                                Link = song.Link,
+                                GenreId = song.GenreId,
+                                AuthorId = song.AuthorId
+                            };
+            return PartialView("_PartialPlay", model);
+        }
+
+        public ActionResult ListAuthor()
+        {
+            var listAuthor = _authorService.List();
+            var model = listAuthor.Select(p => new AuthorModelView()
+            {
+                Id = p.Id,
+                Name = p.Name
+            }).ToList();
+            return PartialView("_PartialListAuthor", model);
+        }
+
+        public ActionResult ListGenre()
+        {
+            var listGenre = _genreService.List();
+            var model = listGenre.Select(p => new GenreModelView()
+            {
+                Id = p.Id,
+                Name = p.Name
+            }).ToList();
+            return PartialView("_PartialListGenre", model);
+        }
+
 
     }
 }

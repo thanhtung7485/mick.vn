@@ -48,15 +48,12 @@
 
 @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { @class = "form-horizontal form-upload", role = "form", id = "frmUploadImage" }))
 {
-    //@Html.AntiForgeryToken()
-    <h4>Upload Content</h4>
     <div class="form-475 form-upload clearfix">
         <div class="col-xs-12">
             <div class="row">
                 <div class="pull-left">
                     <div class="">
                         <label class="dj-form-file btn btn-dj-primary" for="file">
-                            <span>choose file</span>
                             <input type="file" class="form-control" id="file" placeholder="">
                         </label>
                     </div>
@@ -67,91 +64,73 @@
                     </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-9" style="max-width: 70%">
-                    <div class="row">
-                        <video id="my_video" width="550" height="310" autoplay style="display: none">
-                            <source src="" id="video-source">
-                        </video>
-                        <div id="upload-cancel" style="display: none">
-                            <a id="btn-upload" title="Upload file" href="#" onclick="s3UploadController.uploadS3({S3AmazonUrl:'@Model.S3Config.S3AmazonUrl',user:'user', pass:'pass'})" class="mini-btn btn btn-dj-primary">Upload</a>
-                            <a title="Cancel Upload" href="#" id="btn-cancel-upload" onclick="s3UploadController.uploadCancel()" class="mini-btn btn btn-dj-primary">Cancel</a>
-                        </div>
-                        <div id="pause-resume-cancel" style="display: none">
-                            <a title="Pause Upload" href="#" id="btn-pause" onclick=" s3UploadController.pause() " class="mini-btn btn btn-dj-primary">Pause</a>
-                            <a title="Resume Upload" href="#" id="btn-resume" onclick=" s3UploadController.resume() " style="display: none" class="mini-btn btn btn-dj-primary">Resume</a>
-                            <a title="Cancel Upload" href="#" id="btn-cancel" onclick=" s3UploadController.cancel() " class="mini-btn btn btn-dj-primary">Cancel</a>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="percen-process">
-                                </div>
+            <div class="col-xs-12">
+                <div class="pull-left">
+                    <video id="my_video" width="550" height="310" autoplay style="display: none">
+                        <source src="" id="video-source">
+                    </video>
+                    <div id="upload-cancel" style="display: none">
+                        <a id="btn-upload" title="Upload file" href="#" onclick="s3UploadController.uploadS3({S3AmazonUrl:'@Model.S3Config.S3AmazonUrl',user:'user', pass:'pass'})" class="mini-btn btn btn-dj-primary">Upload</a>
+                        <a title="Cancel Upload" href="#" id="btn-cancel-upload" onclick="s3UploadController.uploadCancel()" class="mini-btn btn btn-dj-primary">Cancel</a>
+                    </div>
+                    <div id="pause-resume-cancel" style="display: none">
+                        <a title="Pause Upload" href="#" id="btn-pause" onclick=" s3UploadController.pause() " class="mini-btn btn btn-dj-primary">Pause</a>
+                        <a title="Resume Upload" href="#" id="btn-resume" onclick=" s3UploadController.resume() " style="display: none" class="mini-btn btn btn-dj-primary">Resume</a>
+                        <a title="Cancel Upload" href="#" id="btn-cancel" onclick=" s3UploadController.cancel() " class="mini-btn btn btn-dj-primary">Cancel</a>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="percen-process">
                             </div>
                         </div>
-                        <div id="div-file-name" class="text-over-ellipsis" style="color: #9a9aa4; display: none;">File : <span id="file-name"></span></div>
-                        @Html.TextBoxFor(m => m.Link, new { @class = "customer_custom1", @readonly = "readonly" })
-                        @Html.ValidationMessageFor(m => m.Link, String.Empty, new { @class = "field-validation-error" })
                     </div>
                 </div>
             </div>
+
+            <div class="col-xs-12">
+                <div class="pull-left">
+                    <div id="div-file-name"  style="color: #9a9aa4; display: none;">File : <span id="file-name"></span></div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-12 col-md-9">
+        <div class="">
             @Html.HiddenFor(m => m.Id, new { @class = "form-control dj-form-input" })
         </div>
     </div>
     <div class="form-475">
-        <div class="form-group long-text">
-            <label class="col-sm-12 col-md-3 control-label dj-form-label" for="">Title<span class="required">*</span></label>
-            <div class="col-sm-12 col-md-9">
+        <div class="col-xs-12">
+            <label class="control-label dj-form-label" for="">Name<span class="required">*</span></label>
+            <div>
                 @Html.TextBoxFor(m => m.Name, new { @class = "form-control dj-form-input", @autocomplete = "off" })
                 @Html.ValidationMessageFor(m => m.Name, String.Empty, new { @class = "field-validation-error" })
             </div>
         </div>
 
-        <div class="form-group margin-top-bottom-20">
-            <div class="col-sm-12">
+        <div class="col-xs-12">
+            <div>
+                <br/>
                 <input type="button" id="btn-submit" value="Save" class="btn btn-dj-primary text-uppercase" />
             </div>
         </div>
+
     </div>
 }
-
-@*@section right_col{
-    <div id="sidebar-right-upload"></div>
-    <div id="sidebar-right-activity"></div>
-    <div id="sidebar-right-mydj"></div>
-}*@
 
 <script type="text/javascript">
     var isSubmit = false;
     $(document).ready(function () {
-        
         $("#btn-submit").on("click", function () {
             if (isSubmit) {
                 return;
             }
             isSubmit = true;
             var data = {
-                URL: $('#URL').val(),
-                Title: $('#Title').val(),
-                Tags: $('#Tags').val(),
-
-                GenreID: $('#GenreID').val(),
-                Description: $('#Description').val(),
-                TrackList: $('#TrackList').val(),
-
-                Image: $('#Image').val(),
-                Premium: $('#Premium').prop("checked"),
-                PublishTypeID: $('.mix-public').prop("checked") == true ? 2 : 1,
-
-                Duration: $('#Duration').val(),
-                MediaTypeID: $('#MediaTypeID').val(),
-                ImageSlideShow: $("#ListToStringImageSlideShow").val()
+                Link : document.getElementById("video-source").src,
+                Name: $('#Name').val()
             };
-            $("span[data-valmsg-for]").text("");
-
             $.ajax({
-                url: "/Mix/MixUpload",
+                url: "/Music/Home/Upload",
                 type: "POST",
                 dataType: "json",
                 contentType: "application/json",
@@ -166,7 +145,6 @@
                         commonController.validation.all(response.Errors);
                         isSubmit = false;
                     }
-
                 },
                 error: function (resp) {
                     isSubmit = false;
@@ -192,6 +170,10 @@
             }
             return 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.';
         });
+        
+
+
+       
     });
 
 

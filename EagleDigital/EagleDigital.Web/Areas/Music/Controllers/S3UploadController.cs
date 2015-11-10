@@ -44,7 +44,7 @@ namespace EagleDigital.Web.Areas.Music.Controllers
                         {
                             BucketName = existingBucketName,
                             Key = Request.Params["fileInfo[name]"],
-                            //    ContentType = Request.Params["fileInfo[type]"]
+                            //ContentType = Request.Params["fileInfo[type]"]
                             ContentType = "application/octet-stream"
                         };
                         InitiateMultipartUploadResponse res = client.InitiateMultipartUpload(req);

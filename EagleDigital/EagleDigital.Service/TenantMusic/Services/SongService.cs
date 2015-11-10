@@ -45,6 +45,7 @@ namespace EagleDigital.Service.TenantMusic.Services
         {
             var songDetails = new Song();
             songDetails.Name = song.Name;
+            songDetails.Link = song.Link;
             songDetails.AuthorId = song.AuthorId;
             songDetails.GenreId = song.GenreId;
             songDetails = _songRepository.InsertOnCommit(songDetails);
@@ -56,6 +57,7 @@ namespace EagleDigital.Service.TenantMusic.Services
         {
             var songDetails = _songRepository.Get(song.Id);
             songDetails.Name = song.Name;
+            songDetails.Link = song.Link;
             songDetails.GenreId = song.GenreId;
             songDetails.AuthorId = song.AuthorId;
             _songRepository.CommitChanges();
