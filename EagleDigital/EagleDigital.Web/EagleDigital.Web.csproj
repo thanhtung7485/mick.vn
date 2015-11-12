@@ -143,13 +143,10 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DomainInforController.cs" />
     <Compile Include="Areas\Admin\Models\DomainInforModel.cs" />
-    <Compile Include="Areas\Music\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Music\Controllers\S3UploadController.cs" />
     <Compile Include="Areas\Music\Models\AllinOneModelView.cs" />
     <Compile Include="Areas\Music\Models\AuthorModelView.cs" />
     <Compile Include="Areas\Music\Models\Common.cs" />
     <Compile Include="Areas\Music\Models\GenreModelView.cs" />
-    <Compile Include="Areas\Music\Models\SongModelView.cs" />
     <Compile Include="Areas\Music\MusicAreaRegistration.cs" />
     <Compile Include="Areas\SiteView\Controllers\HomeController.cs" />
     <Compile Include="Areas\SiteView\Models\DomainInforModel.cs" />
@@ -169,10 +166,6 @@
     <Content Include="Areas\Admin\Angular\Service\createDomainInforService.js" />
     <Content Include="Areas\Admin\Angular\Service\domainInforService.js" />
     <Content Include="Areas\Admin\Angular\Service\updateDomainInforService.js" />
-    <Content Include="Areas\Music\Scripts\commonController.js" />
-    <Content Include="Areas\Music\Scripts\responsive.css" />
-    <Content Include="Areas\Music\Scripts\s3UploadController.js" />
-    <Content Include="Areas\Music\Scripts\upload.js" />
     <Content Include="Content\Image\imagesSeach.png" />
     <Content Include="Scripts\plugin\AngularJs\angular.min.js" />
     <Content Include="Scripts\plugin\bootstrap3-editable\css\bootstrap-editable.css" />
@@ -1106,12 +1099,6 @@
     <Content Include="Scripts\plugin\treeview\prints\print.css" />
     <Content Include="Areas\Admin\Views\DomainInfor\Update.cshtml" />
     <Content Include="Areas\Music\Views\Web.config" />
-    <Content Include="Areas\Music\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Music\Views\Home\_PartialUploadMusic.cshtml" />
-    <Content Include="Areas\Music\Views\Home\_PartialListMusic.cshtml" />
-    <Content Include="Areas\Music\Views\Home\_PartialPlay.cshtml" />
-    <Content Include="Areas\Music\Views\Home\_PartialListAuthor.cshtml" />
-    <Content Include="Areas\Music\Views\Home\_PartialListGenre.cshtml" />
     <None Include="Scripts\plugin\validation\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\plugin\validation\jquery.validate.js" />
     <Content Include="Scripts\plugin\validation\jquery.validate.kendo.js" />
@@ -2170,6 +2157,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Music\Content\" />
+    <Folder Include="Areas\Music\Controllers\" />
+    <Folder Include="Areas\Music\Scripts\" />
     <Folder Include="Areas\Music\Views\Shared\" />
     <Folder Include="Areas\SiteView\Views\Shared\" />
     <Folder Include="Models\" />

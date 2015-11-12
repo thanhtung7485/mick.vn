@@ -2,34 +2,25 @@
   <RecentFiles>
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:TenantMusic/d:Models/f:Song.cs" caret="409" fromTop="16" />
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantMusic/d:Services/f:SongService.cs" caret="550" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialListGenre.cshtml" caret="83" fromTop="4" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialListMusic.cshtml" caret="323" fromTop="11" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:SongModelView.cs" caret="362" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:GenreModelView.cs" caret="239" fromTop="10" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialUploadMusic.cshtml" caret="6378" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:AuthorModelView.cs" caret="249" fromTop="11" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:Common.cs" caret="0" fromTop="0" />
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:TenantMusic/d:Repositories/f:IMusicRepository.cs" caret="447" fromTop="15" />
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:TenantMusic/f:MusicContext.cs" caret="480" fromTop="2" />
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:TenantMusic/f:IMusicContext.cs" caret="270" fromTop="10" />
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:TenantMusic/d:Repositories/f:MusicRepository.cs" caret="358" fromTop="4" />
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantMusic/d:IServices/f:ISongService.cs" caret="369" fromTop="8" />
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantMusic/d:IServices/f:IAuthorService.cs" caret="0" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Scripts/f:s3UploadController.js" caret="5173" fromTop="7" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialListAuthor.cshtml" caret="83" fromTop="3" />
-    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:Congiguration.txt" caret="0" fromTop="0" />
-    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:CodeFirstCommand.txt" caret="0" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:Index.cshtml" caret="794" fromTop="20" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Controllers/f:HomeController.cs" caret="4256" fromTop="10" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialPlay.cshtml" caret="69" fromTop="2" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Admin/d:Controllers/f:DomainInforController.cs" caret="0" fromTop="0" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:SiteView/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/f:Web.config" caret="1389" fromTop="16" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/f:Web.config" caret="2335" fromTop="0" />
-    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:ProjectInfor.txt" caret="126" fromTop="6" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/f:Global.asax.cs" caret="0" fromTop="0" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Controllers/f:S3UploadController.cs" caret="0" fromTop="0" />
+    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/f:Web.config" caret="2583" fromTop="20" />
+    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:AuthorModelView.cs" caret="0" fromTop="0" />
+    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:AllinOneModelView.cs" caret="0" fromTop="0" />
+    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:Common.cs" caret="0" fromTop="0" />
+    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:GenreModelView.cs" caret="0" fromTop="0" />
+    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:CodeFirstCommand.txt" caret="0" fromTop="0" />
+    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:Congiguration.txt" caret="0" fromTop="0" />
     <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:Elmah.SqlServer.sql" caret="0" fromTop="0" />
+    <File id="011440B6-5551-45A0-B343-DB14F0781287/d:Infrastructure/f:ProjectInfor.txt" caret="67" fromTop="2" />
   </RecentFiles>
   <RecentEdits>
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantDevelopment/d:Services/f:TabNameService.cs" caret="1590" fromTop="48" />
@@ -47,20 +38,9 @@
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/f:Global.asax.cs" caret="3176" fromTop="18" />
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantMusic/d:Services/f:AuthorService.cs" caret="511" fromTop="16" />
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantMusic/d:Services/f:GenreService.cs" caret="564" fromTop="6" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Scripts/f:upload.js" caret="2411" fromTop="13" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:SongModelView.cs" caret="7937" fromTop="4" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Scripts/f:s3UploadController.js" caret="5223" fromTop="8" />
     <File id="B0059B77-5B36-4EB2-A2F5-E298E25C5400/d:TenantMusic/d:Services/f:SongService.cs" caret="2032" fromTop="23" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Controllers/f:S3UploadController.cs" caret="2163" fromTop="12" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialUploadMusic.cshtml" caret="7500" fromTop="14" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialListMusic.cshtml" caret="279" fromTop="8" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialPlay.cshtml" caret="58" fromTop="1" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:AuthorModelView.cs" caret="249" fromTop="11" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Models/f:GenreModelView.cs" caret="230" fromTop="8" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialListAuthor.cshtml" caret="83" fromTop="3" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:_PartialListGenre.cshtml" caret="81" fromTop="3" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Controllers/f:HomeController.cs" caret="4256" fromTop="10" />
-    <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/d:Home/f:Index.cshtml" caret="794" fromTop="20" />
     <File id="EEC56E75-C5EC-489C-94E9-72542CF260C1/d:Areas/d:Music/d:Views/f:Web.config" caret="1389" fromTop="16" />
   </RecentEdits>
 </RecentFiles>
