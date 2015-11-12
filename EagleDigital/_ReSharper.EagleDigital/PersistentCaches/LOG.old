@@ -1,5 +1,5 @@
-2015/11/12-14:20:57.657 30f8 Recovering log #81
-2015/11/12-14:20:57.658 30f8 Level-0 table #84: started
-2015/11/12-14:20:57.670 30f8 Level-0 table #84: 353706 bytes OK
-2015/11/12-14:20:57.679 30f8 Delete type=0 #81
-2015/11/12-14:20:57.679 30f8 Delete type=3 #79
+2015/11/12-21:48:42.735 2d4c Recovering log #85
+2015/11/12-21:48:42.736 2d4c Level-0 table #87: started
+2015/11/12-21:48:42.746 2d4c Level-0 table #87: 9815 bytes OK
+2015/11/12-21:48:42.763 2d4c Delete type=0 #85
+2015/11/12-21:48:42.763 2d4c Delete type=3 #83
